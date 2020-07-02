@@ -1,0 +1,56 @@
+*{ 
+  margin: 0; 
+  padding: 0;
+  font-style: italic; 
+  text-align: center;
+} 
+
+h1 { 
+ background-color: #41754e;
+ font-size:24px; 
+}
+
+main { 
+ margin:50px auto; 
+ color:white;
+ margin: 50px 50px 50px 50px;
+ width: 50%;
+ border:1px solid; 
+ font-weight:bold; 
+}
+
+.header {
+  background-color:#f2988e;
+  font-size: large;
+  width: 100%;
+  height:50%; 
+}
+
+.main_course {
+ background-color: #a8dbf4;
+ float: left;
+ width:33.333%;
+ height:300px;
+} 
+
+.desserts {
+ background-color:#ffcc99;
+ float: left;
+ width:33.333%;
+ height:300px;
+} 
+
+.drinks { 
+  background-color:  #f7cab7;
+  float: right;
+  width:33.333%;
+  height:300px; 
+}
+
+.footer {
+  background-color:  #888888;
+}
+
+
+
+  
