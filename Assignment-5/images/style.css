@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+
+
+/* #desktop */
+.intro-section {
+    background: linear-gradient(90deg, #FFFCEB 0%, #EAFFFE 100%);
+    /* position: absolute; */
+    /* margin-top: 0px;
+    margin-left: 100px; */
+}
+.intro-section-left {
+    float: left;
+    width:50%;
+    /* remove try another */
+    padding: 165px 172px; 
+}
+.intro-section-right {
+    float: right;
+    width:50%
+}
+
+ .btn-primary {
+      font-size: 18px;
+      padding: 19px 56px;
+    }
+
+.message-section-left {
+    float: left;
+    width:50%
+}
+.message-section-right  {
+    float: right;
+    width:50%;
+    /* remove try another */
+      padding: 100px 130px; 
+}
+h3  {
+    text-align: center;
+}
+
+.trainig-section-content{
+    widows: 25%;
+}
+.training-section-content-left    {
+    float: left;
+}
+.trainig-section-content-right    {
+    float:right;
+}
+.trainig-section-content-oracle   {
+    float:left;
+}
+.trainig-section-content-python  {
+    float:right;
+}
+.trainig-section-content-android    {
+    float: left;
+}
+.trainig-section-content-cisco   {
+    float:right;
+}
+/* .footer-content,span {
+    font-weight: bold;
+
+} */
+
+.footer-content-left{
+    float:left;
+}
+.footer-content-right{
+    float:right;
+}
+
+
+.footer-ctontent-solution   {
+    float:left;
+}
+.footer-content-platfrom    {
+    float: right;
+}
+.footer-content-company-resources-left  {
+    float:left;
+}
+.footer-content-support-right   {
+    float:right;
+
+}

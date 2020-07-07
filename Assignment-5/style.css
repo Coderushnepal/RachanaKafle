@@ -1,0 +1,257 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto';font-size: 22px;
+  }
+
+  .clearfix:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 25px 0 50px;
+    line-height: 140.62%;
+  }
+  .btn-primary {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 5px;
+    border: 1px solid #798BFE;
+    background: #798BFE;
+  }
+
+  /* intro section */
+  .intro-section{
+    padding-top: 60px;
+    background: linear-gradient(90deg, #FFFCEB 0%, #EAFFFE 100%);
+    /* background-size: cover; */
+  }
+
+  .intro-section-left {
+    width: 100%;
+    margin: 60px 0; 
+  }
+  .intro-section-right {
+    width: 100%;
+  }
+
+  .intro-section-right img  {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+  }
+
+/* message section */
+  .message-section-left {
+    width:100%;
+    margin: 60px 0;
+  }
+  .message-section-right {
+    width:100%
+    
+  } 
+  .message-section-left img {
+    width:100%
+  }
+
+  h2{
+    font-size: 26px;
+    line-height: 36px;
+    color: #000000;
+    align-items: center;
+  }
+
+  /* training section */
+  h3{
+    font-size: 26px;
+    line-height: 42px;
+    color: #000000;
+    /* text-align: center; */
+    
+  }
+  .trainig-section-content-oracle,
+  .trainig-section-content-python,
+  .trainig-section-content-android ,
+  .trainig-section-content-cisco
+   {
+    width:100%;
+  }
+
+ /* top footer */
+ .footer-content-solution,
+ .footer-content-platfrom,
+ .footer-content-company,
+ .footer-content-resources,
+ .footer-content-support  {
+   width:100%;
+ }
+
+  .larger-view {
+    display: none;
+  }
+
+  .medium-view {
+    display: none;
+  }
+  .smaller-view {
+    display: block;
+  }
+
+  .btn-primary {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 5px;
+    border: 1px solid #798BFE;
+    background: #798BFE;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
+    /* intro section */
+    .intro-section {
+      padding: 48px 0 80px;
+    }
+
+    .intro-section-left,
+    .intro-section-right{
+      width: 50%;
+    }
+    /* message section */
+
+    .message-section    {
+        padding: 48px 0px 80px;
+    }
+
+    .message-section-left,
+    .message-section-right{
+      width: 50%;
+    }
+    
+  /* training section  */
+  .trainig-section-content-oracle,
+  .trainig-section-content-python,
+  .trainig-section-content-android ,
+  .trainig-section-content-cisco  {
+    width:50%;
+  }
+
+  h3  {
+    font-size: 26px;
+    line-height: 42px;
+    color: #000000;
+    text-align: center; 
+  }
+    /* top footer */
+  .footer-content-solution,
+  .footer-content-platfrom,
+  .footer-content-company,
+  .footer-content-resources,
+  .footer-content-support {
+    width:33.3333%;
+  }
+
+    .medium-view {
+      display: block;
+    }
+
+    .smaller-view {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+  
+    .container {
+      max-width: 1140px; 
+    }
+
+    p {
+      font-size: 18px;
+      margin: 25px 0 60px;
+      line-height: 140.62%;
+    }
+
+    .intro-section {
+      padding: 45px 0;
+    }
+    h1 {
+      font-size: 56px;
+      line-height: 68px;
+    }
+    
+    .message-section {
+        padding: 45px 0;
+    }
+
+    h2  {
+      font-size: 32px;
+      line-height: 42px;
+      color: #000000;
+    }
+    /* training section */
+    h3  {
+      font-size: 32px;
+      line-height: 42px;
+      color: #000000;
+      text-align: center; 
+    }  
+
+    .trainig-section-content-oracle,
+    .trainig-section-content-python,
+    .trainig-section-content-android ,
+    .trainig-section-content-cisco  {
+      width:25%;
+    }
+
+   /* top footer */
+   .footer-content-solution,
+   .footer-content-platfrom,
+   .footer-content-company,
+   .footer-content-resources,
+   .footer-content-support  {
+     width:20%;
+   }
+
+    .btn-primary {
+      font-size: 18px;
+      padding: 19px 56px;
+    }
+    
+    .larger-view {
+      display: block;
+    }
+
+    .medium-view,
+    .smaller-view {
+      display: none;
+    }
+
+  }
