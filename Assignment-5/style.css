@@ -32,14 +32,37 @@
     margin: 25px 0 50px;
     line-height: 140.62%;
   }
-  .btn-primary {
+  /* .btn-primary {
     font-size: 14px;
     color: #ffffff;
     padding: 16px 36px;
     border-radius: 5px;
     border: 1px solid #798BFE;
     background: #798BFE;
-  }
+  } */
+
+.hamburger-icon {
+  float: right;
+}
+
+.menu {
+  height: 5px;
+  width: 25px;
+  background: black;
+  margin: 6px 0;
+}
+
+.navbar {
+  display: none;
+}
+
+.primary-btn  {
+  display:none
+}
+
+.header {
+  padding:20px;
+}
 
   /* intro section */
   .intro-section{
@@ -76,7 +99,8 @@
     
   } 
   .message-section-left img {
-    width:100%
+    width:100%;
+    padding-right:136px;
   }
 
   h2{
@@ -84,16 +108,34 @@
     line-height: 36px;
     color: #000000;
     align-items: center;
+    width:100%;
+    padding-top: 50px;
+  }
+
+  h5  {
+  font-size: 14px;
+  line-height: 140.62%;
+  padding-top: 26.75px;
+}
+
+.message-section-right p  {
+  font-size: 12px;
+  line-height: 140.62%;
+  margin:12px 0 20px;
+}
+.message-section-right a  {
+    font-size: 12px;
+    line-height: 140.62%;
   }
 
   /* training section */
-  h3{
+  h3  {
     font-size: 26px;
-    line-height: 42px;
-    color: #000000;
-    /* text-align: center; */
-    
+    line-height: 42px; 
+    text-align: center;
+    padding-bottom: 44px; 
   }
+
   .trainig-section-content-oracle,
   .trainig-section-content-python,
   .trainig-section-content-android ,
@@ -102,14 +144,65 @@
     width:100%;
   }
 
+  .training-logo  {
+    width:100%;
+  }
+
+  h4  {
+    font-size: 16px;
+    line-height: 28px;
+    padding-top: 20px;
+
+  }
+  .training-section p {
+    font-size:12px;
+    line-height:12px ;
+    align-items: center;
+  }
+
+  .btn_details  {
+    font-size: 14px;
+    color: white;
+    line-height: 16px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #798BFE;
+    margin-top: 20px;
+  }
+
+/* footer */
+.footer-content {
+  display: none;
+  align-items: center;
+}
+
+.top-footer-social-links  {
+  display:none;
+}
+
  /* top footer */
  .footer-content-solution,
  .footer-content-platfrom,
  .footer-content-company,
  .footer-content-resources,
- .footer-content-support  {
+ .footer-content-support 
+ /* .top-footer-social-links */
+ {
    width:100%;
  }
+
+ .footer-title span {
+  font-size:16px;
+  line-height: 28px;
+  align-items: center;
+ }
+
+.footer-bottom-content span {
+  font-size:10px;
+  line-height: 28px;
+  align-items: center;
+}
 
   .larger-view {
     display: none;
@@ -122,14 +215,6 @@
     display: block;
   }
 
-  .btn-primary {
-    font-size: 14px;
-    color: #ffffff;
-    padding: 16px 36px;
-    border-radius: 5px;
-    border: 1px solid #798BFE;
-    background: #798BFE;
-  }
 
   @media screen and (min-width: 768px) {
     .container {
@@ -146,9 +231,12 @@
     }
     /* message section */
 
-    .message-section    {
+    /* .message-section    {
         padding: 48px 0px 80px;
-    }
+    } */
+    /* .message-section  img  {
+      padding: 64px 44px;
+  } */
 
     .message-section-left,
     .message-section-right{
@@ -162,22 +250,95 @@
   .trainig-section-content-cisco  {
     width:50%;
   }
+  .training-logo  {
+    padding-right:41px;
+  }
+  h2  {
+    float:right;
+    width:50%;
+    padding-top:64px 59px;
+  }
 
   h3  {
     font-size: 26px;
     line-height: 42px;
     color: #000000;
-    text-align: center; 
+    /* text-align: center; */
+    /* padding: 60px 264px 44px 287px; */
   }
-    /* top footer */
+  h4  {
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 20px;
+  }
+
+  .training-section p
+  {
+    font-size:12px;
+    line-height:17px ;
+    align-items: center;
+  }
+
+  .btn_details  {
+    font-size: 14px;
+    color: white;
+    line-height: 16px;
+    text-align: center;
+    align-items: center;
+    padding: 16px 36px;
+    border-radius: 5px;
+    background: #798BFE;
+  }
+   
   .footer-content-solution,
   .footer-content-platfrom,
   .footer-content-company,
   .footer-content-resources,
-  .footer-content-support {
+  .footer-content-support,
+  .top-footer-social-links {
     width:33.3333%;
   }
 
+  .footer-content ul li a  {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    color:#000000;
+    
+  } 
+
+  .footer-content ul  {
+    list-style-type: none;
+  } 
+
+  .footer-content {
+    display: block;
+    align-items: center;
+  } 
+  .straight-line  {
+    display:none;
+  }
+  .dropdown-img {
+    display: none;
+  }
+  .top-footer-social-links {
+    display:block;
+  } 
+  .bottom-footer-social-links {
+    display:none;
+  } 
+  .footer-title span {
+    font-size:18px;
+    line-height: 28px;
+    align-items: center; 
+   }
+
+  .footer-bottom-content span {
+    font-size: 12px;
+    line-height: 28px;
+    align-items: center;
+   
+  } 
     .medium-view {
       display: block;
     }
@@ -198,30 +359,111 @@
       margin: 25px 0 60px;
       line-height: 140.62%;
     }
+    /* heading */
+  .hamburger-icon {
+      display: none;
+  }
 
-    .intro-section {
+  .navbar {
+      display:block;
+      width: 75%;
+      position: relative;
+      left: 125px;
+  }
+
+ .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+} 
+ .navbar ul li {
+    float: left;
+} 
+
+   .navbar ul li a {
+    display: block; 
+    text-align: left; 
+     padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;  
+     font-size: 13px;
+    line-height: 15px;
+    color: #000000;
+}    
+
+.btn-primary {
+    display: block;
+    /* width: 10%; */
+    background: linear-gradient(90deg, #3AE4DF 0%, #7A88FF 104.29%);
+    border-radius: 5px;
+    padding: 14px 14.37px 24px 25px;
+}
+
+/* footer */
+
+.top-footer-social-links {
+  display:none;
+}
+.bottom-footer-social-links {
+  display:block;
+}
+
+ .footer-content ul{
+  display: block;
+  list-style-type: none;
+} 
+
+ .footer-content ul li a  {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  color:#000000;
+  
+} 
+
+.intro-section {
       padding: 45px 0;
     }
+
     h1 {
       font-size: 56px;
       line-height: 68px;
     }
     
-    .message-section {
+     .message-section {
         padding: 45px 0;
-    }
-
+    } 
+    
     h2  {
       font-size: 32px;
       line-height: 42px;
       color: #000000;
+      padding: 54px 275px 0px 0px;
+    } 
+  
+    h5 {
+      font-size: 18px;
+      line-height: 25px;
+      padding: 26px 0 13px;
     }
-    /* training section */
+   
+    .message-section-right p {
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 26px;
+     }
+  
+     .message-section-right a {
+      font-size: 16px;
+      line-height: 140.62%;
+     }
+
     h3  {
       font-size: 32px;
       line-height: 42px;
       color: #000000;
-      text-align: center; 
+      padding-bottom: 65px;
     }  
 
     .trainig-section-content-oracle,
@@ -229,6 +471,36 @@
     .trainig-section-content-android ,
     .trainig-section-content-cisco  {
       width:25%;
+    }
+
+    .training-logo  {
+      padding-right:22px;
+    }
+
+    h4  {
+      font-size: 18px;
+      line-height: 28px;
+      padding-top: 24px;
+  
+    }
+
+    .training-section p
+    {
+      font-size:14px;
+      line-height:20px ;
+    }
+
+    /* footer */
+    .footer-content {
+      display: block;
+      align-items: center;
+    }
+
+    .straight-line  {
+      display:none;
+    }
+    .dropdown-img {
+      display: none;
     }
 
    /* top footer */
@@ -240,10 +512,22 @@
      width:20%;
    }
 
-    .btn-primary {
+   .footer-title span {
+    font-size:18px;
+    line-height: 28px; 
+    align-items: center;
+   }
+ 
+  .footer-bottom-content span {
+    font-size: 12px;
+    line-height: 28px;
+    align-items: center;
+   
+  } 
+    /* .btn-primary {
       font-size: 18px;
       padding: 19px 56px;
-    }
+    } */
     
     .larger-view {
       display: block;
@@ -253,5 +537,6 @@
     .smaller-view {
       display: none;
     }
+  
 
   }
