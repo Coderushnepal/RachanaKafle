@@ -27,6 +27,7 @@
   .right {
     float: right;
   }
+  y 
   .medium-view {
     display: block;
   }
@@ -34,14 +35,154 @@
   .smaller-view {
     display: none;
   }
+  /* header */
+  .content-section  {
+    background-image: url("images/background-image.png");
+  }
+  .menu {
+    height: 5px;
+    width: 25px;
+    background: black;
+    margin: 6px 0;
+  }
+  .nav-right  {
+    display:none;
+  }
+/* content */
+.bottom content-left  {
+  width:100%;
+ 
+}
+.bottom content-right  {
+  width:100%
+}
+.bottom-content-right h1  {
+font-weight: 900;
+/* font-size: 20px; */
+line-height: 65px;
+align-self: center;
+color: #FFFFFF;
+}
+.bottom-content-right p{
+font-weight: bold;
+font-size: 16px;
+line-height: 20px;
+color: #FFFFFF;
+}
+.btn_try {
+background: #FFFFFF;
+border-radius: 35px;
+font-weight: bold;
+font-size: 22px;
+line-height: 33px;
+text-align: center;
+letter-spacing: 0.1px;
+color: #38A3F1;
+}
 
+/* feature
+need to calculate width?? */
+.top-feature-section{
+  text-align: center;
+}
+.feature-content-1{
+  width:100%
+}
+.feature-content-2{
+  width:100%
+}
+.feature-content-3{
+  width:100%
+}
+/* prototype */
+.top-prototype-section {
+  text-align: center;
 
+}
+/* partner */
+/* ??need to calculate width */
+.top-partner-section{
+  text-align:center;
+}
+/* need to calculate width */
+.partner-content-1  {
+  width:100%;
+}
+.partner-content-2  {
+  width:100%;
+}
+.partner-content-3 {
+  width:100%;
+}
+.partner-content-4 {
+  width:100%;
+}
+.partner-content-5 {
+  width:100%;
+}
+.partner-content-6 {
+  width:100%;
+}
 
+/* price section */
+.top-price-section{
+  text-align: center;
+}
+/* price section */
+/* need to calculate width */
+.price-contenet-1 {
+  width:100%;
+}
+.price-contenet-2 {
+  width:100%;
+}
+.price-contenet-3 {
+  width:100%;
+}
 
+/* contactus section */
+.top-contactus-section{
+  text-align: center;
+}
+.contact-form {
+  width:50%;
+}
+.contact-information {
+  width:50%;
+}
+.contact-ul-1 {
+  list-style-type: none;
 
+}
+.contact-ul-2 {
+  list-style-type: none; 
+}
+.contact-ul-2 li {
+  display: inline;
 
+}
+.contact-form {
+  width: 50%;
+}
+.contact-information {
+  /* width: 50%; */
+  display: none;
+}
 
-
+/* footer */
+.page-section ul {
+  list-style-type: none;
+}
+/* need to calculate width */
+.page-section {
+  width:100%;
+}
+.map-section {
+  width:100%;
+}
+footer-contact-information-section {
+  width:100%;
+}
 
 
   @media screen and (min-width: 768px) {
@@ -55,6 +196,88 @@
       .smaller-view {
         display: none;
       }
+/* content */
+/* calculate width and mileko chaina */
+.bottom content-left{
+  width:50%;
+}
+.bottom content-right  {
+  width:25%
+}
+/* feature */
+.top-feature-section{
+  text-align: center;
+}
+.feature-content-1{
+  width:33.3333%
+}
+.feature-content-2{
+  width:33.3333%
+}
+.feature-content-3{
+  width:33.3333%
+  }
+  /* partner */
+/* ??need to calculate width */
+.top-partner-section{
+  text-align:center;
+}
+/* need to calculate width */
+.partner-content-1  {
+  width:33.333%;
+}
+.partner-content-2  {
+  width:33.333%;
+}
+.partner-content-3 {
+  width:33.333%;
+}
+.partner-content-4 {
+  width:33.333%;
+}
+.partner-content-5 {
+  width:33.333%;
+}
+.partner-content-6 {
+  width:33.333%;
+}
+  /* price section */
+/* need to calculate width */
+.price-contenet-1 {
+  width:33.333%;
+}
+.price-contenet-2 {
+  width:33.333%;
+}
+.price-contenet-3 {
+  width:33.333%;
+}
+/* contactus section */
+/* need to calculate width */
+.contact-form {
+  float:left;
+  width:50%
+}
+.contact-information  {
+  float:right;
+  width:50%;
+  display:block;
+  
+}
+/* need to calculate width */
+.page-section {
+  width:33.333%;
+  float:left;
+}
+.map-section {
+  width:33.333%;
+  float:left;
+}
+footer-contact-information-section {
+  width:33.33%;
+  float:left;
+
+}
 }
 
 
@@ -71,4 +294,149 @@
       .smaller-view {
         display: none;
       }
+      /* header */
+      .nav-right  {
+        display:block;
+      }
+      .menu {
+        display: none;
+      }
+ 
+  .nav-right ul {
+    list-style-type: none;
+  } 
+ .nav-right ul li {
+    float: left;
+  } 
+   .nav-right-1 ul li a {
+    display: block; 
+    text-align: left; 
+    /* check */
+    padding: 14px 16px;
+
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 27px; 
+    text-align: center;
+    color: #ffffff;
+}  
+.email {
+  /* check */
+  /* padding-top: 12px;
+  padding-bottom: 12px; */
+
+  display:block;
+  background: #EFEFEF;
+  border: 1px solid #E8E8E8;
+  box-sizing: border-box;
+  border-radius: 39px;
+  color: #18171D; 
+
+}
+.btn_subsribe {
+background: #FFFFFF;
+border-radius: 35px;
+font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+letter-spacing: 0.2px;
+color: #EF2779;
+}
+/* content */
+/* calculate width??*/
+.bottom content-left  {
+  width:50%;
+ 
+}
+.bottom content-right  {
+  width:50%
+}
+/* feature */
+/* need to calculate width */
+.top-feature-section  {
+  text-align: center;
+}
+.feature-content-1  {
+  width:33.3333%;
+}
+.feature-content-2  {
+  width:33.3333%;
+}
+.feature-content-3  {
+  width:33.3333%;
+}
+.top-feature-section span {
+font-weight: bold;
+font-size: 22px;
+line-height: 33px;
+text-align: center;
+color: #252B42;
+
+}
+.top-feature-section h2 {
+font-size: 46px;
+line-height: 57px;
+text-align: center;
+letter-spacing: 0.2px;
+color: #252B42;
+}
+/* prototype */
+.top-prototype-section h2 {
+font-size: 46px;
+line-height: 57px;
+letter-spacing: 0.2px;
+color: #252B42;
+}
+.top-prototype-section p{
+/* font-weight: bold; */
+font-size: 16px;
+line-height: 20px;
+}
+/* need to calculate width */
+.top-partner-section{
+  text-align:center;
+}
+.partner-content-1  {
+  width:33.3333%;
+}
+.partner-content-2  {
+  width:33.3333%;
+}
+.partner-content-3 {
+  width:33.3333%;
+}
+.partner-content-4 {
+  width:33.3333%;
+}
+.partner-content-5 {
+  width:33.3333%;
+}
+.partner-content-6 {
+  width:33.3333%;
+}
+/* price section */
+/* need to calculate width */
+.price-contenet-1 {
+  width:33.333%;
+}
+.price-contenet-2 {
+  width:33.333%;
+}
+.price-contenet-3 {
+  width:33.333%;
+}
+ /* neha code */
+ .banner-right{
+  width: 50%;
+  float:right;
+  
+}
+.banner-left{
+  width: 50%;
+  float:left
+}
+
+
+
+    
 }
