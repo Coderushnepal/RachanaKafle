@@ -345,11 +345,13 @@ color: #EF2779;
 /* content */
 /* calculate width??*/
 .bottom content-left  {
-  width:50%;
+  /* width:50%; */
+  float:left;
  
 }
 .bottom content-right  {
-  width:50%
+  /* width:50% */
+  float:right;
 }
 /* feature */
 /* need to calculate width */
@@ -424,16 +426,6 @@ line-height: 20px;
 }
 .price-contenet-3 {
   width:33.333%;
-}
- /* neha code */
- .banner-right{
-  width: 50%;
-  float:right;
-  
-}
-.banner-left{
-  width: 50%;
-  float:left
 }
 
 
