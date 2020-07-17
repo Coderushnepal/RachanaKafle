@@ -1,0 +1,639 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+/* check */
+body {
+	font-family: 'Roboto';
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+/* check */
+.container {
+	width: 100%;
+	padding: 0 10px;
+	/* padding: 0 20px; */
+	margin: 0 auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+y .medium-view {
+	display: block;
+}
+
+.smaller-view {
+	display: none;
+}
+/* header */
+.content-section {
+	background-image: url("images/background-image.png");
+}
+.menu {
+	height: 5px;
+	width: 25px;
+	background: black;
+	margin: 6px 0;
+}
+.nav-right {
+	display: none;
+}
+/* content */
+.bottom content-left {
+	width: 100%;
+}
+.bottom content-right {
+	width: 100%;
+}
+.bottom-content-right h1 {
+	font-weight: 900;
+	/* font-size: 20px; */
+	line-height: 65px;
+	align-self: center;
+	color: #ffffff;
+}
+.bottom-content-right p {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #ffffff;
+}
+.btn_try {
+	background: #ffffff;
+	border-radius: 35px;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 33px;
+	text-align: center;
+	letter-spacing: 0.1px;
+	color: #38a3f1;
+	/* margin-top: 60px;
+	padding: 10px 75px 10px 75px; */
+}
+
+/* feature
+need to calculate width?? */
+.top-feature-section h2 {
+	font-size: 27px;
+	line-height: 40px;
+	color: #252b42;
+}
+
+.top-feature-section {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+.feature-content-1 {
+	width: 100%;
+}
+.feature-content-2 {
+	width: 100%;
+}
+.feature-content-3 {
+	width: 100%;
+}
+
+.feature-right {
+	width: 90%;
+}
+/* .feature-left {
+	width: 5%;
+} */
+.feature-left img {
+	width: 35px;
+}
+.feature-content p {
+	padding-top: 13px;
+}
+/* prototype */
+.top-prototype-section {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+.top-prototype-section h2 {
+	font-size: 27px;
+	line-height: 40px;
+	color: #252b42;
+}
+
+.btn_primary {
+	border-radius: 35px;
+	margin: 0px 30px;
+	background: #38a3f1;
+	color: #ffffff;
+	margin-top: 60px;
+	padding: 12px 80px 12px 80px;
+	align-self: center;
+}
+
+/* partner */
+.partner-section {
+	margin: 60px auto;
+}
+
+.top-partner-section h2 {
+	font-size: 27px;
+	line-height: 40px;
+	color: #252b42;
+}
+.partner-content p {
+	padding-top: 15px;
+}
+
+.top-partner-content {
+	/* margin-top:90px;
+  margin-bottom:70px; */
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+
+.top-partner-section {
+	text-align: center;
+}
+/* need to calculate width */
+.partner-content-1 {
+	width: 100%;
+}
+.partner-content-2 {
+	width: 100%;
+}
+.partner-content-3 {
+	width: 100%;
+}
+.partner-content-4 {
+	width: 100%;
+}
+.partner-content-5 {
+	width: 100%;
+}
+.partner-content-6 {
+	width: 100%;
+}
+
+/* price section */
+.top-price-section {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.top-price-section h2 {
+	font-size: 27px;
+	line-height: 40px;
+	color: #252b42;
+}
+
+.price-content {
+	padding: 30px;
+	margin: 10px auto;
+	width: 90%;
+}
+
+.price-content-1 {
+	background: #ffffff;
+	border: 1px solid #dedede;
+	box-sizing: border-box;
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	border-radius: 10px;
+}
+.price-content-2 {
+	background: #ffffff;
+	border: 1px solid #dedede;
+	box-sizing: border-box;
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	border-radius: 10px;
+}
+.price-content-3 {
+	background: linear-gradient(37.8deg, #ef2779 0.79%, #7834be 79.29%);
+	border: 1px solid #dedede;
+	box-sizing: border-box;
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	border-radius: 10px;
+	color: #ffffff;
+}
+.btn_order {
+	color: #ffffff;
+	border-radius: 35px;
+	background: #38a3f1;
+	width: 50%;
+	padding: 12px 30px;
+}
+.btn_order-content-3 {
+	background: #ffffff;
+	border-radius: 35px;
+	/* padding:12px 85.5px 12px 85.5px; */
+	padding: 12px 30px;
+	width: 50%;
+	color: #ef2779;
+}
+/* .price-span {
+	padding-bottom: 30px;
+} */
+.price-section {
+	margin: 60px auto;
+}
+
+/* .bottom-price-section  {
+  font-weight: bold;
+} */
+
+/* contactus section */
+.contactus-section {
+	background: #252b42;
+	color: #ffffff;
+}
+.top-contactus-section {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+.top-contactus-section h2 {
+	font-size: 27px;
+	line-height: 40px;
+	color: #ffffff;
+}
+.contact-us-section {
+	margin: 60px 0;
+}
+.contact-form {
+	width: 70%;
+	background: #ffffff;
+	border: 0.65371px solid #dddddd;
+	box-sizing: border-box;
+	box-shadow: 0px 8.49823px 12.4205px rgba(0, 0, 0, 0.07);
+	border-radius: 13.0742px;
+	padding: 79px 65px 85px 34px;
+}
+#name {
+	background: #f5f5f5;
+	border: 1px solid #e8e8e8;
+	box-sizing: border-box;
+	border-radius: 50px;
+	margin: 10px;
+	padding: 10px;
+}
+#email {
+	background: #f5f5f5;
+	border: 1px solid #e8e8e8;
+	box-sizing: border-box;
+	border-radius: 39px;
+	margin: 10px;
+	padding: 10px;
+}
+#text-message {
+	background: #f5f5f5;
+	border: 0.65371px solid #e8e8e8;
+	margin: 10px;
+	padding: 10px;
+}
+.btn-submit {
+	background: #ee5079;
+	border-radius: 35px;
+	margin: 0px 31px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 16px;
+	align-self: center;
+	padding: 12px 34.69px 12px 34.8px;
+}
+
+.contact-information {
+	width: 50%;
+}
+.contact-ul-1 {
+	list-style-type: none;
+	margin-bottom: 27px;
+}
+.contact-ul-1 li {
+	padding-bottom: 10px;
+}
+
+.contact-ul-2 {
+	list-style-type: none;
+	/* padding-top: 50px; */
+}
+.contact-ul-2 li {
+	display: inline;
+}
+.contact-form {
+	width: 50%;
+}
+
+/* footer */
+.page-section ul {
+	list-style-type: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.page-section ul li {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+/* need to calculate width */
+.page-section {
+	width: 100%;
+}
+.map-section {
+	width: 100%;
+	margin-right: 20PX;
+}
+footer-contact-information-section {
+	width: 100%;
+}
+.footer-content {
+	margin: 60px auto;
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 768px;
+	}
+	.medium-view {
+		display: block;
+	}
+
+	.smaller-view {
+		display: none;
+	}
+	/* content */
+	/* calculate width and mileko chaina */
+	.bottom content-left {
+		width: 50%;
+	}
+	.bottom content-right {
+		width: 25%;
+	}
+	/* feature */
+	.top-feature-section {
+		text-align: center;
+	}
+	.top-feature-section h2 {
+		font-size: 35x;
+		line-height: 50x;
+		color: #252b42;
+	}
+	.feature-content-1 {
+		width: 33.3333%;
+	}
+	.feature-content-2 {
+		width: 33.3333%;
+	}
+	.feature-content-3 {
+		width: 33.3333%;
+	}
+	/* prototype section */
+
+	.top-prototype-section h2 {
+		font-size: 35x;
+		line-height: 50x;
+		color: #252b42;
+	}
+	/* partner */
+	/* ??need to calculate width */
+
+	.partner-container {
+		width: 80%;
+		margin: 60px auto;
+	}
+
+	.top-partner-section {
+		text-align: center;
+	}
+	.top-partner-section h2 {
+		font-size: 35px;
+		line-height: 50px;
+		/* letter-spacing: 0.2px; */
+		color: #252b42;
+	}
+	/* need to calculate width */
+	.partner-content-1 {
+		width: 29.10%;
+		margin-right: 10px;
+		/* width: 20%;  */
+	}
+	.partner-content-2 {
+		width: 29.10%;
+		margin-right: 10px;
+		/* width: 20%;  */
+	}
+	.partner-content-3 {
+		width: 29.10%;
+		margin-right: 10px;
+		/* width: 20%;  */
+	}
+	.partner-content-4 {
+		width: 29.10%;
+		margin-right: 10px;
+		/* width: 20%;  */
+	}
+	.partner-content-5 {
+		width: 29.10%;
+		margin-right: 10px;
+		/* width: 20%;  */
+	}
+	.partner-content-6 {
+		width: 29.10%;
+		margin-right: 10px;
+		/* width: 20%;  */
+	}
+
+	/* price section */
+	.top-price-section h2 {
+		font-size: 35px;
+		line-height: 50px;
+		letter-spacing: 0.2px;
+		color: #252b42;
+	}
+
+	.price-content {
+		width: 30.31%;
+	}
+	.price-content-1,
+	.price-content-2 {
+		margin-right: 30px;
+	}
+	.btn_order {
+		width: 90%;
+	}
+	.btn_order-content-3 {
+		width: 90%;
+	}
+
+	.price-span-1 {
+		font-size: 50px;
+		line-height: 65px;
+		color: #252b42;
+		font-weight: bold;
+	}
+
+	.price-span-2 {
+		font-weight: bold;
+		font-size: 45px;
+		/* font-size: 66px; */
+
+		/* line-height: 33px; */
+		color: #252b42;
+	}
+
+	.price-span-3 {
+		margin-left: -20px;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 18px;
+		color: #374754;
+	}
+
+	/* contactus section */
+	/* need to calculate width */
+	.contactus-section {
+		padding-bottom: 40px;
+		padding-top: 10px;
+	}
+	.contact-form {
+		float: left;
+		width: 54%;
+	}
+	.contact-information {
+		float: right;
+		width: 36%;
+		display: block;
+	}
+	.top-contactus-section {
+		margin: 20px 0 40px;
+	}
+	.top-contactus-section h2 {
+		font-size: 35px;
+		line-height: 50px;
+		color: #ffffff;
+	}
+	.bottom-contact-us-section {
+		width: 60%;
+		margin: 0 auto;
+	}
+	/* need to calculate width */
+	.page-section {
+		width: 15%;
+		float: left;
+	}
+	.map-section {
+		width: 49%;
+		float: left;
+	}
+	footer-contact-information-section {
+		width: 27%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+	.larger-view {
+		display: block;
+	}
+
+	.medium-view,
+	.smaller-view {
+		display: none;
+	}
+	/* header */
+	.nav-right {
+		display: block;
+	}
+	.menu {
+		display: none;
+	}
+
+	.nav-right ul {
+		list-style-type: none;
+	}
+	.nav-right ul li {
+		float: left;
+	}
+	.nav-right-1 ul li a {
+		display: block;
+		text-align: left;
+		/* check */
+		padding: 14px 16px;
+
+		text-decoration: none;
+		font-size: 15px;
+		line-height: 27px;
+		text-align: center;
+		color: #ffffff;
+	}
+	.email {
+		/* check */
+		/* padding-top: 12px;
+  padding-bottom: 12px; */
+
+		display: block;
+		background: #efefef;
+		border: 1px solid #e8e8e8;
+		box-sizing: border-box;
+		border-radius: 39px;
+		color: #18171d;
+		padding: 10px 39px 10px 39px;
+	}
+	.btn_subsribe {
+		background: #ffffff;
+		border-radius: 35px;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 16px;
+		letter-spacing: 0.2px;
+		color: #ef2779;
+		padding: 10px 20px 10px 20px;
+	}
+	/* content */
+	/* calculate width??*/
+	.bottom-content-left {
+		/* width:50%; */
+		float: left;
+	}
+	.bottom-content-right {
+		/* width:50% */
+		float: right;
+	}
+	/* feature */
+	/* need to calculate width */
+	/* .top-feature-section {
+		text-align: center;
+	}
+	.feature-content-1 {
+		width: 33.3333%;
+	}
+	.feature-content-2 {
+		width: 33.3333%;
+	}
+	.feature-content-3 {
+		width: 33.3333%;
+	} */
+	/* .top-feature-section span {
+font-weight: bold;
+font-size: 22px;
+line-height: 33px;
+text-align: center;
+color: #252B42;
+
+} */
+	/* prototype */
+	/* 
+/* .top-prototype-section p {
+		/* font-weight: bold;
+		font-size: 16px;
+		line-height: 20px;
+	}  */
+}
