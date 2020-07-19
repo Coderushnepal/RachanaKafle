@@ -32,14 +32,16 @@
     /* margin: 25px 0 50px; */
     line-height: 140.62%;
   }
-  /* .btn-primary {
-    font-size: 14px;
-    color: #ffffff;
-    padding: 16px 36px;
-    border-radius: 5px;
-    border: 1px solid #798BFE;
+  .btn-enroll{
+    color:white;
     background: #798BFE;
-  } */
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    padding:15px 36px;
+    margin-top: 50px;
+   
+}
 
 .hamburger-icon {
   float: right;
@@ -394,15 +396,20 @@
      font-size: 13px;
     line-height: 15px;
     color: #000000;
-}    
+} 
 
-.btn-primary {
-    display: block;
-    /* width: 10%; */
-    background: linear-gradient(90deg, #3AE4DF 0%, #7A88FF 104.29%);
-    border-radius: 5px;
-    padding: 14px 14.37px 24px 25px;
+.btn-login  {
+background: linear-gradient(90deg, #3AE4DF 0%, #7A88FF 104.29%);
+border-radius: 5px;
+color:white;
+padding:14px 50px;
 }
+
+.btn-enroll {
+    padding:19px 57px;
+    margin-top: 60px;
+   
+ } 
 
 /* footer */
 
@@ -488,11 +495,6 @@
   
     }
 
-    /* .training-section p
-    {
-      font-size:14px;
-      line-height:20px ;
-    } */
 
     /* footer */
     .footer-content {
