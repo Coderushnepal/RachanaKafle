@@ -29,7 +29,7 @@
 
   p {
     font-size: 14px;
-    margin: 25px 0 50px;
+    /* margin: 25px 0 50px; */
     line-height: 140.62%;
   }
   /* .btn-primary {
@@ -168,6 +168,7 @@
     align-items: center;
     border-radius: 5px;
     background: #798BFE;
+    padding: 9px 14px;
     margin-top: 20px;
   }
 
@@ -190,6 +191,10 @@
  /* .top-footer-social-links */
  {
    width:100%;
+
+ }
+ .footer-top {
+   margin-top: 70px;
  }
 
  .footer-title span {
@@ -355,8 +360,7 @@
     }
 
     p {
-      font-size: 18px;
-      margin: 25px 0 60px;
+      font-size: 18px;   
       line-height: 140.62%;
     }
     /* heading */
@@ -484,11 +488,11 @@
   
     }
 
-    .training-section p
+    /* .training-section p
     {
       font-size:14px;
       line-height:20px ;
-    }
+    } */
 
     /* footer */
     .footer-content {
@@ -524,10 +528,6 @@
     align-items: center;
    
   } 
-    /* .btn-primary {
-      font-size: 18px;
-      padding: 19px 56px;
-    } */
     
     .larger-view {
       display: block;
