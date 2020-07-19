@@ -3,7 +3,7 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
-/* check */
+
 body {
 	font-family: 'Roboto';
 }
@@ -13,11 +13,10 @@ body {
 	display: table;
 	clear: both;
 }
-/* check */
+
 .container {
 	width: 100%;
-	padding: 0 10px;
-	/* padding: 0 20px; */
+	padding: 0 20px;
 	margin: 0 auto;
 }
 
@@ -112,6 +111,7 @@ need to calculate width?? */
 } */
 .feature-left img {
 	width: 35px;
+	float:left;
 }
 .feature-content p {
 	padding-top: 13px;
@@ -266,51 +266,56 @@ need to calculate width?? */
 .contact-us-section {
 	margin: 60px 0;
 }
+.contact-information {
+	display: none;
+}
+
+
+
 .contact-form {
-	width: 70%;
+	width: 90%;
 	background: #ffffff;
 	border: 0.65371px solid #dddddd;
-	box-sizing: border-box;
 	box-shadow: 0px 8.49823px 12.4205px rgba(0, 0, 0, 0.07);
 	border-radius: 13.0742px;
-	padding: 79px 65px 85px 34px;
+	/* padding: 79px 65px 85px 34px; */
+	margin:15px;
+	/* text-align: center; */
+	padding:10px;
 }
 #name {
 	background: #f5f5f5;
 	border: 1px solid #e8e8e8;
 	box-sizing: border-box;
 	border-radius: 50px;
-	margin: 10px;
-	padding: 10px;
+	margin: 7px;
+	padding: 12px 30px;
 }
 #email {
 	background: #f5f5f5;
 	border: 1px solid #e8e8e8;
 	box-sizing: border-box;
 	border-radius: 39px;
-	margin: 10px;
-	padding: 10px;
+	margin: 7px;
+	padding: 12px 30px;
 }
 #text-message {
 	background: #f5f5f5;
 	border: 0.65371px solid #e8e8e8;
-	margin: 10px;
-	padding: 10px;
+	margin: 7px;
+	padding: 12px 30px;
 }
 .btn-submit {
 	background: #ee5079;
+	color:white;
 	border-radius: 35px;
-	margin: 0px 31px;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 16px;
 	align-self: center;
-	padding: 12px 34.69px 12px 34.8px;
+	padding: 10px 24px;
 }
 
-.contact-information {
-	width: 50%;
-}
 .contact-ul-1 {
 	list-style-type: none;
 	margin-bottom: 27px;
@@ -326,9 +331,7 @@ need to calculate width?? */
 .contact-ul-2 li {
 	display: inline;
 }
-.contact-form {
-	width: 50%;
-}
+
 
 /* footer */
 .page-section ul {
@@ -382,6 +385,9 @@ footer-contact-information-section {
 		font-size: 35x;
 		line-height: 50x;
 		color: #252b42;
+	}
+	.feature-right {
+	width: 83%;
 	}
 	.feature-content-1 {
 		width: 33.3333%;
@@ -495,19 +501,39 @@ footer-contact-information-section {
 	}
 
 	/* contactus section */
-	/* need to calculate width */
 	.contactus-section {
 		padding-bottom: 40px;
 		padding-top: 10px;
 	}
 	.contact-form {
 		float: left;
-		width: 54%;
+		width: 85%;
+		/* margin:10px; */
+		padding:40px;
 	}
-	.contact-information {
-		float: right;
-		width: 36%;
-		display: block;
+	/* .contact-information {
+		display:inline-block;
+		width:40%;
+		
+	} */
+
+	#name	{
+		margin: 7px;
+		padding: 10px 40px;
+
+	}
+	#email	{
+		margin: 7px;
+		padding: 10px 40px;
+
+	}
+	#text-message	{
+	margin: 7px;
+	padding: 11px 40px;
+
+	}
+	.btn-submit	{
+		padding: 10px 27px;
 	}
 	.top-contactus-section {
 		margin: 20px 0 40px;
@@ -575,10 +601,6 @@ footer-contact-information-section {
 		color: #ffffff;
 	}
 	.email {
-		/* check */
-		/* padding-top: 12px;
-  padding-bottom: 12px; */
-
 		display: block;
 		background: #efefef;
 		border: 1px solid #e8e8e8;
@@ -607,33 +629,35 @@ footer-contact-information-section {
 		/* width:50% */
 		float: right;
 	}
-	/* feature */
-	/* need to calculate width */
-	/* .top-feature-section {
-		text-align: center;
-	}
-	.feature-content-1 {
-		width: 33.3333%;
-	}
-	.feature-content-2 {
-		width: 33.3333%;
-	}
-	.feature-content-3 {
-		width: 33.3333%;
-	} */
-	/* .top-feature-section span {
-font-weight: bold;
-font-size: 22px;
-line-height: 33px;
-text-align: center;
-color: #252B42;
 
-} */
-	/* prototype */
-	/* 
-/* .top-prototype-section p {
-		/* font-weight: bold;
-		font-size: 16px;
-		line-height: 20px;
-	}  */
+	.feature-right {
+		width: 88%;
+	}
+	/* .contact-information */
+	.contact-form {
+		float: left;
+		width: 50%;
+		margin:5px;
+		padding: 30px 10px;
+	}
+	.contact-information {
+		display:inline-block;
+		width:36%;		
+	}
+	#name	{
+		margin:10px;
+	}
+	#email	{
+		margin:10px;
+	}
+	#text-message	{
+		margin-top:10px;
+		margin-bottom: 25px;
+		padding: 3px 40px;
+	
+		}
+	.btn-submit	{
+		padding: 10px 25px;
+		}
+
 }
