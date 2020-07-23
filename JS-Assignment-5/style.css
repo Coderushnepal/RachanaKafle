@@ -1,0 +1,7 @@
+#box1{
+    position: absolute;
+    border: 2px solid black;
+} 
+body{
+    overflow: hidden;
+}
