@@ -51,8 +51,9 @@ function Ball(i) {
 	};
 
 	this.remove = function() {
-		document.body.removeChild(this.ball);
 		clearInterval(this.interval);
+		document.body.removeChild(this.ball);
+		// clearInterval(this.interval);
 		this.isDeleted = true;
 	};
 }
