@@ -1,0 +1,12 @@
+#main{
+    position: absolute;
+    overflow: hidden;
+    width:auto;
+    height:auto;
+    top:50px;
+    left:400px;
+    background-color: #f3e5ab;
+} 
+#form {
+    padding: 20px;
+}
