@@ -5,8 +5,17 @@
     height:auto;
     top:50px;
     left:400px;
-    background-color: #f3e5ab;
+    box-shadow: 2px 2px 2px 2px gray;
 } 
 #form {
     padding: 20px;
+}
+input {
+    width: 250px;
+    padding:5px;
+}
+
+button {
+    width: 250px;
+    padding:5px;
 }

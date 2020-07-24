@@ -1,12 +1,11 @@
 
 function Form() {
-    //id ..
     var x=document.getElementById('form');
     var form=document.createElement('form');
     form.setAttribute("action","");
     form.setAttribute("method","post");
     x.appendChild(form);
-    
+       
     //heading
     var heading=document.createElement("h1");
     heading.innerHTML="Register with Us";
@@ -14,7 +13,7 @@ function Form() {
     form.appendChild(heading);
 
     //username
-    var username = document.createTextNode("Username");
+    var username = document.createTextNode("Username");;
     form.appendChild(username);
     var linebreak=document.createElement('br');
     form.appendChild(linebreak);
@@ -22,8 +21,7 @@ function Form() {
     var input_username = document.createElement("input");
     input_username.setAttribute("type", "text");
     input_username.setAttribute("id", "username");
-    //error in placeholder
-    // input_username.placeholder(Enter)
+    input_username.placeholder = "Enter username";
     form.appendChild(input_username);
     var linebreak=document.createElement('br');
     form.appendChild(linebreak);
@@ -37,6 +35,7 @@ function Form() {
     form.appendChild(linebreak);
 
     var input_email=document.createElement("input")
+    input_email.placeholder="Enter email";
     input_email.setAttribute("type","email");
     input_email.setAttribute("id", "email");
     form.appendChild(input_email);
@@ -53,6 +52,7 @@ function Form() {
     form.appendChild(linebreak)
 
     var input_password=document.createElement("input")
+    input_password.placeholder="Enter password"
     input_password.setAttribute("type","password")
     input_password.setAttribute("id", "password");
     form.appendChild(input_password)
@@ -68,6 +68,7 @@ function Form() {
     form.appendChild(linebreak)
 
     var input_confirm_password=document.createElement("input")
+    input_confirm_password.placeholder="Enter password again"
     input_confirm_password.setAttribute("type","password")
     input_confirm_password.setAttribute("id", "confirm_password");
     form.appendChild(input_confirm_password)
@@ -77,15 +78,14 @@ function Form() {
     form.appendChild(linebreak);
 
     //submit button
-    btn = document.createElement("BUTTON"); 
+    btn = document.createElement("button"); 
     btn.innerHTML = "Submit";
     btn.style.backgroundColor="#00B2FF";
     btn.style.color="white";
     btn.style.padding="5px 70px";
     btn.style.margin="5px";
-    form.appendChild(btn);     
-        
-	}
+    form.appendChild(btn);           
+}
 Form();
 
 
