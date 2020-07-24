@@ -1,40 +1,3 @@
-// var btn = document.getElementById('btn');
-// var i=0
-// btn.addEventListener("click", function(){
-  
-//     var ball=document.createElement("div")
- 
-//     var box=document.getElementById('box1')
-//     ball.id=i
-  
-
-// ball.style.height ="25px";
-// ball.style.width ="25px";
-// ball.style.backgroundColor = "red";
-// ball.style.borderRadius= "50%";
-// ball.style.position="absolute";
-// ball.style.top = Math.random()*(box.clientHeight-25)+'px';
-// ball.style.left= Math.random()*(box.clientWidth-25)+'px';
-
-
-
-// btn.addEventListener("click", function(e){
-// //new 
-// //each ball lai aafai move hune banaune (1sec ma move vairako cha)  
-// //???? aafai jharirako cha mileko chaina
-// setInterval(function(){
-// var currentTop=ball.style.top;
-
-// newValue=parseInt(currentTop)+10;
-
-// ball.style.top=newValue+"px";
-// }, 1000/60);   
-// });
-// box.appendChild(ball);
-// i++
-// });
-
-
 
 var btn = document.getElementById("btn");
 var i = 0;
@@ -48,17 +11,12 @@ btn.addEventListener("click", function () {
   ball.style.width = "25px";
   ball.style.backgroundColor = "red";
   ball.style.borderRadius = "50%";
-
-  box.style.position = "absolute";
-
   ball.style.position = "absolute";
   ball.style.top = Math.random() * (box.clientHeight - 25) + "px";
   ball.style.left = Math.random() * (box.clientWidth - 25) + "px";
-
   var direction = 1;
 
   ball.addEventListener("click", function (e) {
-    //move continously
 
     setInterval(function () {
       var currentTop = ball.style.top;
