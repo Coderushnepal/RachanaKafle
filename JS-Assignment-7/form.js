@@ -3,7 +3,7 @@ function Form() {
     var x=document.getElementById('form');
     var form=document.createElement('form');
     form.setAttribute("action","");
-    form.setAttribute("method","post");
+    // form.setAttribute("method","post");
     x.appendChild(form);
     form.setAttribute("onsubmit","validate()");
 
@@ -124,6 +124,10 @@ function Form() {
     form.appendChild(btn);        
 }
 Form();
+var btn=document.getElementById("btn")
+btn.addEventListener("click",function(e) {
+    e.preventDefault()
+});
 
 // document.getElementById("btn").addEventListener("click", function(event){
 //     event.preventDefault()
