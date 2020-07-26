@@ -3,7 +3,7 @@ function Form() {
     var x=document.getElementById('form');
     var form=document.createElement('form');
     form.setAttribute("action","");
-    form.setAttribute("method","post");
+    // form.setAttribute("method","post");
     x.appendChild(form);
     form.setAttribute("onsubmit","validate()");
 

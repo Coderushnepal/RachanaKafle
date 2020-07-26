@@ -18,16 +18,26 @@
         else {
             error_username.style.display="none"; 
             username.style.border="3px solid green";                    
-        }
+        } 
 
-        if(email.value=="") {       
-            error_email.style.display="block"; 
+        if(email.value==="" ){
+            error_email.style.display="block";
+            email.style.border="3px solid red";
+            
+        }
+        else if(!isEmail(email.value)){
+            error_email.style.display="block";
             email.style.border="3px solid red";
         }
-        else {
-            error_email.style.display="none"; 
-             email.style.border="3px solid green";         
-            }
+        else{
+            error_email.style.display="none";
+            email.style.border="3px solid green";
+        }
+        function isEmail(email) 
+		{
+			return /^[^ ]+@[^ ]+\.[a-z]{2,3}$/.test(email);
+		}
+
         if(password.value.length<6) {
             error_password.style.display="block";  
             password.style.border="3px solid red";
