@@ -10,7 +10,7 @@
         var error_confirm_password=document.getElementById("err_confirm_password")
 
 
-        if (username.value==""||username.value.length3) {
+        if (username.value==""||username.value.length<3) {
             // alert("No blank value allowed")
                 error_username.style.display="block"; 
                 username.style.border="3px solid red";                  
@@ -37,19 +37,17 @@
             password.style.border="3px solid green";
            }   
            
-        //    if (confirm_password.value="") {
-
-        //    }
-
-            if(confirm_password.value==password.value){ 
+            if(confirm_password.value==password.value && confirm_password.value!==""){ 
                
-                error_confirm_password.style.display="block";  
-                 confirm_password.style.border="3px solid red"; 
+                error_confirm_password.style.display="none";  
+                 confirm_password.style.border="3px solid green"; 
             }     
                                           
             else {
-                error_confirm_password.style.display="none"; 
-                confirm_password.style.border="3px solid green";
-                }    
+                error_confirm_password.style.display="block"; 
+                confirm_password.style.border="3px solid red";
+                }   
 
     }
+   
+    

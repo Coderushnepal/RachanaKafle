@@ -3,7 +3,7 @@ function Form() {
     var x=document.getElementById('form');
     var form=document.createElement('form');
     form.setAttribute("action","");
-    // form.setAttribute("method","post");
+    form.setAttribute("method","post");
     x.appendChild(form);
     form.setAttribute("onsubmit","validate()");
 
@@ -103,8 +103,8 @@ function Form() {
     form.appendChild(input_confirm_password)
     var linebreak=document.createElement('br');
     form.appendChild(linebreak);
-    var linebreak=document.createElement('br');
-    form.appendChild(linebreak);
+    // var linebreak=document.createElement('br');
+    // form.appendChild(linebreak);
 
     var error_message=document.createElement("p");
     error_message.innerHTML="password do not match";
@@ -116,7 +116,7 @@ function Form() {
     //submit button
     btn = document.createElement("button"); 
     btn.innerHTML = "Submit";
-    error_message.setAttribute("id", "btn");
+    btn.setAttribute("id", "btn");
     btn.style.backgroundColor="#00B2FF";
     btn.style.color="white";
     btn.style.padding="5px 70px";
@@ -124,15 +124,11 @@ function Form() {
     form.appendChild(btn);        
 }
 Form();
-var btn=document.getElementById("btn")
+
 btn.addEventListener("click",function(e) {
-    e.preventDefault()
-});
-
-// document.getElementById("btn").addEventListener("click", function(event){
-//     event.preventDefault()
-//   }); 
-
+    validate();
+      e.preventDefault();
+  });
 
 
 
