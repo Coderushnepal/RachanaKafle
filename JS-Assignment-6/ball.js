@@ -1,7 +1,7 @@
 
 function Ball(i) {
-	var id = i;
-	var interval = null;
+	// var id = i;
+	// var interval = null;
 	this.ball = document.createElement('div');
 	this.isDeleteable = false;
 	this.isDeleted = false;
@@ -10,7 +10,8 @@ function Ball(i) {
 	this.create = function() {
 		var size = parseInt(Math.random() * 80) + 'px';
 		this.ball.style.height = this.ball.style.width = size;
-		var position = new Position(window.innerWidth, 0);
+		//dimesion
+		var position = new Position(window.innerWidth-parseInt(size), 0);
 		position.generateXY();
 		this.ball.style.top = position.x + 'px';
 		this.ball.style.left = position.y + 'px';
