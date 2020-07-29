@@ -79,6 +79,10 @@ document.addEventListener('keypress' , function(event) {
 
     }
   }
+  else{
+    wrongWord.push(keyword);
+    console.log(wrongWord)
+    }
   
 });
 
