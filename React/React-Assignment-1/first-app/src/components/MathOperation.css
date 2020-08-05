@@ -1,0 +1,18 @@
+.btn  { 
+    height: 50px; 
+    width: 100px;
+    margin-top:100px ; 
+    margin-left:10px;
+    border-radius: 10px;
+    } 
+.btn-add {
+    background-color: brown;
+} 
+.btn-subtract {
+    background-color: darkblue;
+} 
+
+.btn span {
+    font-size:40px;
+    color: white;
+}
