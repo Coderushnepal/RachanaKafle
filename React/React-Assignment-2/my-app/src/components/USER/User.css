@@ -1,0 +1,10 @@
+.btn {
+    background-color:green;
+    color: white;
+    border-radius: 10%;
+    height:30px;
+}
+h2 {
+    font-style: italic;
+    color: rgb(54, 68, 197);
+}
