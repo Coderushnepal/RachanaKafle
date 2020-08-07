@@ -18,7 +18,7 @@ btn.addEventListener("click", function () {
 
   ball.addEventListener("click", function (e) {
 
-    setInterval(function () {
+    setInterval(function () { 
       var currentTop = ball.style.top;
       var newValue = parseInt(currentTop) + 10 * direction;
       ball.style.top = newValue + "px";

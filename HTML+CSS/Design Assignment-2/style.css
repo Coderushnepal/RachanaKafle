@@ -35,8 +35,13 @@ y .medium-view {
 	display: none;
 }
 /* header */
+/* .content-section {
+	background-image: url("images/background-image.png");
+} */
 .content-section {
 	background-image: url("images/background-image.png");
+	background-repeat: no-repeat;
+	position: relative;
 }
 .menu {
 	height: 5px;
@@ -67,21 +72,7 @@ y .medium-view {
 	line-height: 20px;
 	color: #ffffff;
 }
-.btn_try {
-	background: #ffffff;
-	border-radius: 35px;
-	font-weight: bold;
-	font-size: 22px;
-	line-height: 33px;
-	text-align: center;
-	letter-spacing: 0.1px;
-	color: #38a3f1;
-	/* margin-top: 60px;
-	padding: 10px 75px 10px 75px; */
-}
-
-/* feature
-need to calculate width?? */
+ /* features */
 .top-feature-section h2 {
 	font-size: 27px;
 	line-height: 40px;
@@ -92,6 +83,12 @@ need to calculate width?? */
 	text-align: center;
 	margin-top: 80px;
 	margin-bottom: 60px;
+}
+.top-feature-section p {
+	padding:20px;
+}
+.feature-content 	{
+	margin:7px;
 }
 .feature-content-1 {
 	width: 100%;
@@ -127,8 +124,12 @@ need to calculate width?? */
 	line-height: 40px;
 	color: #252b42;
 }
+.top-prototype-section p	{
+	padding:20px;
 
-.btn_primary {
+}
+/* //second */
+.btn_try {
 	border-radius: 35px;
 	margin: 0px 30px;
 	background: #38a3f1;
@@ -142,6 +143,10 @@ need to calculate width?? */
 .partner-section {
 	margin: 60px auto;
 }
+h4 {
+	padding:15px;
+}
+
 
 .top-partner-section h2 {
 	font-size: 27px;
@@ -150,6 +155,9 @@ need to calculate width?? */
 }
 .partner-content p {
 	padding-top: 15px;
+}
+.top-partner-section p	{
+	padding:20px
 }
 
 .top-partner-content {
@@ -243,6 +251,29 @@ need to calculate width?? */
 .price-section {
 	margin: 60px auto;
 }
+.top-price-section p	{
+	padding:20px
+}
+
+.price-span-1 {
+	font-size: 45px;
+	color: #252b42;
+	font-weight: bold;
+}
+
+.price-span-2 {
+	font-weight: bold;
+	font-size: 30px;
+	color: #252b42;
+}
+
+.price-span-3 {
+	margin-left: -20px;
+	font-weight: bold;
+	font-size: 17px;
+	color: #374754;
+}
+
 
 /* .bottom-price-section  {
   font-weight: bold;
@@ -262,6 +293,10 @@ need to calculate width?? */
 	font-size: 27px;
 	line-height: 40px;
 	color: #ffffff;
+}
+.top-contactus-section p {
+	padding:20px;
+
 }
 .contact-us-section {
 	margin: 60px 0;
@@ -387,16 +422,17 @@ footer-contact-information-section {
 		color: #252b42;
 	}
 	.feature-right {
-	width: 83%;
+	width: 80%;
 	}
 	.feature-content-1 {
-		width: 33.3333%;
+		width: 29.34%;
 	}
+	
 	.feature-content-2 {
-		width: 33.3333%;
+		width: 29.34%;
 	}
 	.feature-content-3 {
-		width: 33.3333%;
+		width: 29.34%;
 	}
 	/* prototype section */
 
@@ -477,26 +513,21 @@ footer-contact-information-section {
 	}
 
 	.price-span-1 {
-		font-size: 50px;
-		line-height: 65px;
+		font-size: 45px;
 		color: #252b42;
 		font-weight: bold;
 	}
 
 	.price-span-2 {
 		font-weight: bold;
-		font-size: 45px;
-		/* font-size: 66px; */
-
-		/* line-height: 33px; */
+		font-size: 30px;
 		color: #252b42;
 	}
 
 	.price-span-3 {
 		margin-left: -20px;
 		font-weight: bold;
-		font-size: 12px;
-		line-height: 18px;
+		font-size: 17px;
 		color: #374754;
 	}
 
@@ -600,14 +631,14 @@ footer-contact-information-section {
 		text-align: center;
 		color: #ffffff;
 	}
-	.email {
+	.btn_email {
 		display: block;
 		background: #efefef;
 		border: 1px solid #e8e8e8;
-		box-sizing: border-box;
 		border-radius: 39px;
 		color: #18171d;
-		padding: 10px 39px 10px 39px;
+		padding: 7px
+		/* margin:4px; */
 	}
 	.btn_subsribe {
 		background: #ffffff;
@@ -624,14 +655,58 @@ footer-contact-information-section {
 	.bottom-content-left {
 		/* width:50%; */
 		float: left;
+		/* position: absolute; */
 	}
 	.bottom-content-right {
-		/* width:50% */
+		width:50%;
 		float: right;
+		/* position: absolute; */
+	}
+	.feature-content 	{
+		margin:15px;
+	}
+	.feature-right {
+		width: 80%;
+	}
+	.feature-content 	{
+		margin:15px;
+	}
+	.feature-content-1 {
+		/* width: 29.34%; */
+		width:20%
+	}
+	.feature-content-2 {
+		width: 20%
+	}
+	.feature-content-3 {
+		width: 20%;
 	}
 
-	.feature-right {
-		width: 88%;
+	/* price */
+	h3 {
+		padding:10px;
+	}
+	.price-subheading	{
+		padding:10px;
+	}
+
+	.price-span-1 {
+		font-size: 45px;
+		color: #252b42;
+		font-weight: bold;
+	}
+
+	.price-span-2 {
+		font-weight: bold;
+		font-size: 30px;
+		color: #252b42;
+	}
+
+	.price-span-3 {
+		margin-left: -20px;
+		font-weight: bold;
+		font-size: 17px;
+		color: #374754;
 	}
 	/* .contact-information */
 	.contact-form {
@@ -642,7 +717,9 @@ footer-contact-information-section {
 	}
 	.contact-information {
 		display:inline-block;
-		width:36%;		
+		width:45%;	
+		padding-left: 30px;
+		padding-top: 30px;	
 	}
 	#name	{
 		margin:10px;
