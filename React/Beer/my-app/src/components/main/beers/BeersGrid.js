@@ -14,8 +14,9 @@ import { fetchBeers } from "../../../services/beerServices";
     // pageInfo:{page:0,size:5},
     pageInfo:{page:0,size:25},
     hasMore: true,
+    searchFor:"",
+    hasFilter: false,
   };
-
 }
 
 
@@ -24,16 +25,22 @@ scrollPartnerRef=null;
 // api call
 fetchBeers = async () => {
   try {
-      const { page, size } =this.state.pageInfo;
-      const data=await fetchBeers(page+1 ,size);
+      const { beers, pageInfo, searchFor, hasFilter } = this.state;
+      let { page, size } = pageInfo;
 
+      if (hasFilter) {
+        page = 0;
+      }
+
+      const data = await fetchBeers(page + 1, size, searchFor);
       this.setState({
-          beers:[...this.state.beers, ...data],
+          beers: hasFilter ? data : [...beers, ...data],
           pageInfo:{
             ...this.state.pageInfo,
             page:data.length? page+1:page,
           },
           hasMore: !!data.length,
+          hasFilter: false,
       });
       // toast.success({
       // title:"Yay!!",
@@ -48,6 +55,19 @@ fetchBeers = async () => {
   }
 };
 
+setSearchText = (searchText) => {
+  this.setState(
+    {
+      searchFor: searchText,
+      hasFilter: true,
+  
+    },
+    () => {
+      this.fetchBeers();
+    }  
+  );
+};
+
 componentDidMount() {
   this.fetchBeers();
 
@@ -57,7 +77,7 @@ componentDidMount() {
     const { beers ,hasMore } = this.state;
        return(
          <div>
-        <Header />
+        <Header setSearchText={this.setSearchText}  />
            <main>
           <div className="container" ref={(r) =>(this.scrollPartnerRef=r)}>
             <InfiniteScroll

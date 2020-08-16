@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import * as routes from "../../constants/routes"
 
@@ -15,6 +16,11 @@ handleTextChange = (event) => {
         searchText:event.target.value,
     });
 };
+
+search = (event) => {
+    event.preventDefault();
+    this.props.setSearchText(this.state.searchText);
+  };
 
     render(){
         return (
@@ -33,7 +39,7 @@ handleTextChange = (event) => {
                     <div className="header__bottom">
                         <h1>The Beer Bank</h1>
                         <span>Find your favorite beer here</span>
-                        <form>
+                        <form onSubmit={this.search}>
                             <input type="search" 
                             placeholder="search beer name"
                             // {/* //value le oneway binding garcha */}
@@ -47,5 +53,8 @@ handleTextChange = (event) => {
             
         )
     }
+}
+Header.propTypes ={
+    setSearchText:PropTypes.func,
 }
 export default Header
