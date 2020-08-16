@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import InfiniteScroll from 'react-infinite-scroll-component';
 import Beer from "./Beer";
 import * as toast from "../../../utils/toast";
 import { Header, Spinner } from "../../comman";
@@ -9,36 +10,43 @@ import { fetchBeers } from "../../../services/beerServices";
     super(props)
   
   this.state={
-    isLoading:true,
-    //array ma data rakhne
     beers:[],
+    // pageInfo:{page:0,size:5},
+    pageInfo:{page:0,size:25},
+    hasMore: true,
   };
+
 }
 
-scrollPartnerRef=null
+
+scrollPartnerRef=null;
 
 // api call
 fetchBeers = async () => {
   try {
-      const data =await fetchBeers();
+      const { page, size } =this.state.pageInfo;
+      const data=await fetchBeers(page+1 ,size);
+
       this.setState({
-          beers:data,
-          isLoading:false,
+          beers:[...this.state.beers, ...data],
+          pageInfo:{
+            ...this.state.pageInfo,
+            page:data.length? page+1:page,
+          },
+          hasMore: !!data.length,
       });
-      toast.success({
-      title:"Yay!!",
-      message:"Beer aayo!!"
-  });
+      // toast.success({
+      // title:"Yay!!",
+      // message:"Beer aayo!!"
+  // });
   } catch (error){
       const errorMsg=error.response.data.message;
       toast.error({
           title:"on Snap",
-          message:"errorMsg"
+          message:errorMsg
       });
   }
 };
-
-
 
 componentDidMount() {
   this.fetchBeers();
@@ -46,22 +54,23 @@ componentDidMount() {
 } 
 
    render(){
-    const { isLoading } = this.state;
+    const { beers ,hasMore } = this.state;
        return(
          <div>
         <Header />
-        {isLoading?(
-          <Spinner />
-        ):(
            <main>
-          <div className="container" 
-          ref={(r) =>(this.scrollPartnerRef=r)}>
+          <div className="container" ref={(r) =>(this.scrollPartnerRef=r)}>
+            <InfiniteScroll
+              dataLength={beers.length}
+              next={this.fetchBeers}
+              hasMore={hasMore} 
+              loader={<Spinner />} >
             {this.state.beers.map(beer => (
               <Beer key={beer.id} info={beer} /> 
-            ))}
+            ))}          
+            </InfiniteScroll>
           </div>
         </main> 
-         ) }
         </div>
        ); 
    }
