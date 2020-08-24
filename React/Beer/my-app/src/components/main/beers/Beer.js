@@ -1,6 +1,7 @@
 import React,{Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
-import BeerModal from './BeerModal'
+import BeerModal from './BeerModal';
+import { dummyBeersData as favorites} from '../../../constants/dummyData';
 
 class Beer extends Component {
     constructor(props){
@@ -26,7 +27,8 @@ class Beer extends Component {
     render(){
         const {isFavorite,showMadal}=this.state;
         const{id,name,description,image_url}=this.props.info;
-        console.log(this.props.info)
+        // console.log(this.props.info)
+        const findBeer=favorites.findBeer(beer => beer.id ===id)
         return (
             <Fragment>
             {showMadal? (

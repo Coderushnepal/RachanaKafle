@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Beer from "./Beer";
 import * as toast from "../../../utils/toast";
-import { Header, Spinner } from "../../comman";
+import { Header, Spinner,Counter } from "../../comman";
 import { fetchBeers } from "../../../services/beerServices";
+// import Counter from "../../comman/counter";
 
  class BeerGrid extends Component {
   constructor(props){
@@ -79,6 +80,8 @@ componentDidMount() {
          <div>
         <Header setSearchText={this.setSearchText}  />
            <main>
+             <Counter />
+
           <div className="container" ref={(r) =>(this.scrollPartnerRef=r)}>
             <InfiniteScroll
               dataLength={beers.length}
