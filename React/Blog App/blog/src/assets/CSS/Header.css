@@ -1,42 +1,83 @@
 
-.container {
-    background-color:green
-}
-
-/* 
-.header {
+/* .container {
     background-color:green
 } */
 
+
+.header {
+    background-color:green
+}
+
 .header__top h1 {
+    float: left;
+    min-width: 90%;
     text-align: center;
     color:white;
 }
+.clearfix:after{
+    content:"";
+    display: block;
+    clear: both;
+}
 .btn__login {
     float:right;
-    border-radius: 35px;
+    border-radius: 25px;
 	background: #38a3f1;
-	color: #ffffff;
-	padding: 10px 20px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 25px;
+    margin-top: 4px;
+    margin-right:3px;
+    border: 2px solid goldenrod;
     
 }
-.navbar ul {
+
+.header__bottom{
+    display: flex;
+    flex-direction: row;
+    /* justify-content:  flex-start; */
+}
+.navbar {
+    display: flex;
+    flex-direction:row;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    width:30%;
+    
 } 
-
 
 .navbar li {
-    float:left;
+    flex: 1;
+    margin-left:10px;
     display: block; 
     text-align: left; 
-    padding: 14px 16px; 
+    /* padding: 14px 16px;  */
     font-size: 20px;
-    line-height: 15px;
+   
 } 
-.navbar li Link {
+.navbar li a{
 text-decoration: none;
 text-transform: uppercase; 
+color:white;
+}
+
+.search__bottom {
+    flex: 1;
+    min-width: 100px;
+    /* background-color:red; */
+    /* height:40px;
+    border: 2px solid goldenrod;
+     */
+  
+}
+
+.search-bar input {
+    width: 30%;
+    padding:10px 30px;
+    border-radius:20px;
+    border: 2px solid goldenrod;
+    margin-bottom: 3px;
+    font-size: 17px;
 }

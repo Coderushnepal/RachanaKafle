@@ -10,12 +10,13 @@ class Header extends  Component {
         return(
             <header className="header">
                 <div className="container">
-                <div className="header__top">
+                <div className="header__top clearfix">
                     <h1>Rachana's Blog</h1>
                     <button class="btn__login">Login</button>
+
                 </div>
                  <div className="header__bottom">
-                    <ul className="navbar left"> 
+                    <ul className="navbar"> 
                             <li>
                             <Link to={routes.HOME} title="Home">Home</Link>
                             </li>
@@ -26,7 +27,11 @@ class Header extends  Component {
                             <Link to={routes.CONTACT} title="About">contact Me</Link>
                             </li>
                      </ul> 
-                    <div className="search__bottom left">
+                    <div className="search__bottom ">
+                        <form className="search-bar">
+                            <input type="search" placeholder="Search blog here">
+                            </input>
+                        </form>
                     </div>
                 </div> 
                 </div>
