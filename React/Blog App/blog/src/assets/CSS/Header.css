@@ -1,4 +1,42 @@
+
+.container {
+    background-color:green
+}
+
+/* 
+.header {
+    background-color:green
+} */
+
 .header__top h1 {
     text-align: center;
-    color:blue;
+    color:white;
+}
+.btn__login {
+    float:right;
+    border-radius: 35px;
+	background: #38a3f1;
+	color: #ffffff;
+	padding: 10px 20px;
+    
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+} 
+
+
+.navbar li {
+    float:left;
+    display: block; 
+    text-align: left; 
+    padding: 14px 16px; 
+    font-size: 20px;
+    line-height: 15px;
+} 
+.navbar li Link {
+text-decoration: none;
+text-transform: uppercase; 
 }
