@@ -1,8 +1,4 @@
 
-/* .container {
-    background-color:green
-} */
-
 
 .header {
     background-color:green
@@ -14,7 +10,7 @@
     text-align: center;
     color:white;
 }
-.clearfix:after{
+.clearfix:after {
     content:"";
     display: block;
     clear: both;
@@ -32,7 +28,7 @@
     
 }
 
-.header__bottom{
+.header__bottom {
     display: flex;
     flex-direction: row;
     /* justify-content:  flex-start; */
@@ -57,11 +53,18 @@
     font-size: 20px;
    
 } 
-.navbar li a{
+.navbar li a    {
 text-decoration: none;
 text-transform: uppercase; 
 color:white;
 }
+ 
+a:hover {
+    /* background-color:brown; */
+    background-color:#D2691E
+  }
+ 
+
 
 .search__bottom {
     flex: 1;
