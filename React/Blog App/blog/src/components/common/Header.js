@@ -6,6 +6,25 @@ import "./Header.css"
 
 
 class Header extends  Component {
+    constructor(props) {
+        super(props)
+    
+        this.state={
+            searchText: "",
+        };
+    }
+    handleTextChange = (event) => {
+        this.setState({
+            searchText:event.target.value,
+        });
+    };
+   
+    
+    search = (event) => {
+        event.preventDefault();
+        this.props.setSearchText(this.state.searchText);
+    };
+
     render(){
         return(
             <header className="header">
@@ -28,9 +47,12 @@ class Header extends  Component {
                             </li>
                      </ul> 
                     <div className="search__bottom ">
-                        <form className="search-bar">
-                            <input type="search" placeholder="Search blog here">
-                            </input>
+                        <form  onSubmit={this.search} className="search-bar">
+                            <input type="search"
+                             placeholder="Search blog here"
+                             value={this.state.searchText} 
+                             onChange={this.handleTextChange} 
+                             />   
                         </form>
                     </div>
                 </div> 

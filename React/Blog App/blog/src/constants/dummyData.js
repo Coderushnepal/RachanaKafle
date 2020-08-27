@@ -24,7 +24,7 @@ export const dummyBlogsData =[
         },
     {
         "id": 4,
-        "blogTitle" : "SEVEN PLACES FOR HIKING AROUN KATHMANDY VALLEY",
+        "blogTitle" : "SEVEN PLACES FOR HIKING AROUND KATHMANDY VALLEY",
         "postedOn": "May 03, 2020",
         "blogImage": "",
         "blogText":"There are many beautiful places in Nepal that you haven’t visited yet. Hiking simply means walking for hours and hours, enjoying each trail and it is a journey that adds joy in your boring life. Being limited inside your home or at your office room will make your life dull. You may be leading a busy life and couldn’t get holidays for traveling. But then, there are few places that will make your journey memorable. You shouldn’t allocate more time for the sake of hiking. If you are from Kathmandu, do read it once. This time we are focusing on hiking around Kathmandu."

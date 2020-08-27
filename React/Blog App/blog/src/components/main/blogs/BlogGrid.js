@@ -1,19 +1,3 @@
-// import React, {Component} from "react";
-// import { Header } from "../../common";
- 
-// class  BlogGrid extends Component {
-//     render(){
-//         return(
-//             <div>
-//                 <Header />
-//             </div>
-//         )
-//     }
-// }
-
-// export default BlogGrid
-
-
 
 import React ,{ Component } from 'react';
 import {dummyBlogsData} from "../../../constants/dummyData"
@@ -29,6 +13,7 @@ import { Header } from '../../common';
     isLoading:true,
     //array ma data rakhne
     blogs:[],
+    searchFor:"",
   };
 }
  
@@ -48,12 +33,27 @@ componentDidMount() {
   this.fetchBlogs();
  
 } 
+
+// fetchBlogsByName =async () => {
+
+// }
+
+setSearchText = (searchText) => {
+  this.setState(
+    {
+      searchFor: searchText,
+    },
+    () => {
+      this.fetchBlogs();
+    }  
+  );
+};
  
    render(){
     // const { isLoading } = this.state;
        return(
          <div>
-        <Header />
+           <Header setSearchText={this.setSearchText}  />
            <main>
           <div className="container" 
           ref={(r) =>(this.scrollPartnerRef=r)}>
