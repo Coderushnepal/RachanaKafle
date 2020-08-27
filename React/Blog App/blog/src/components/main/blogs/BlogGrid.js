@@ -1,8 +1,10 @@
 
 import React ,{ Component } from 'react';
+// import InfiniteScroll from "react-infinite-scroll-component"
 import {dummyBlogsData} from "../../../constants/dummyData"
 import Blog from "./blog"
 import { Header } from '../../common';
+
 
  
  class BlogGrid extends Component {
@@ -14,6 +16,10 @@ import { Header } from '../../common';
     //data 
     blogs:[],
     searchFor:"",
+
+    // //infinite scroll
+    // pageInfo:{page:0,size:3},
+    // hasMore:true,
   };
 }
  
@@ -55,12 +61,10 @@ setSearchText = (searchText) => {
          <div>
            <Header setSearchText={this.setSearchText}  />
            <main>
-          <div className="container" 
-          ref={(r) =>(this.scrollPartnerRef=r)}>
+          {/* ref={(r) =>(this.scrollPartnerRef=r)} */}
             {this.state.blogs.map(blog => (
               <Blog key={blog.id} info={blog} /> 
             ))}
-          </div>
         </main> 
          ) 
         </div>

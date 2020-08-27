@@ -1,11 +1,12 @@
 import React,{Component} from "react";
 import { Header } from "../common";
+import ContactHeader from "./ContactHeader";
 
 class Contact extends Component {
     render(){
         return(
             <div>
-                <p>welcome to contact page</p>
+               <ContactHeader />
                 
             </div>
         )
@@ -13,3 +14,4 @@ class Contact extends Component {
     }
 }
 export default Contact
+

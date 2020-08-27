@@ -1,6 +1,8 @@
 import React,{Component, Fragment} from 'react';
 import { dummyBlogsData } from '../../../constants/dummyData';
 
+import "./Blog.css";
+
 
  
 class Blog extends Component {
@@ -12,17 +14,29 @@ class Blog extends Component {
         const{blogTitle,blogText,blogImage}=this.props.info;
         console.log(blogImage)
         return (
-            <Fragment>
+            // <Fragment>
+            // <div class="main">
             <div className="card">
-                {/* <div className="card__imgcontainer" 
-                // style={{backgroundImage : `url(${blogImage})` }}/>               */}
+
+                <div class="blog__image">
                 <img src={blogImage}></img>
+                </div>
+
+                <div class="blog__title">
                 <h2>{blogTitle}</h2>
-                <span className="card__description">
+                </div>
+
+                <div className="blog__description">
                     {blogText}
-                </span>
+                    <button className="btn__readmore">Read More</button>
+                </div>
+                <div class="icons">
+                <i class="far fa-comment"></i>
+                </div>
+
             </div>
-            </Fragment>
+            // </div>
+            // </Fragment>
         );
     }
  
