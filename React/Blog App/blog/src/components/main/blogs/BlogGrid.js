@@ -11,7 +11,7 @@ import { Header } from '../../common';
   
   this.state={
     isLoading:true,
-    //array ma data rakhne
+    //data 
     blogs:[],
     searchFor:"",
   };
