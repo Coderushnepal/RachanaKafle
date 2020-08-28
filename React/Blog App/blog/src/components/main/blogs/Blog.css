@@ -4,7 +4,7 @@
 }
 .card {
     width: 40%;
-    /* background-color:white;  */
+    background-color:white; 
     display: inline-block;
     border-radius:10px;
     margin:40px; 
@@ -37,4 +37,14 @@
     border-radius:20px;
     cursor: pointer;
 }
+.heart__icons {
+    float:left;
+    font-size: 30px;
+    color:red
+}
 
+.comment__icons
+ {
+    float:right;
+    font-size: 30px;;
+}

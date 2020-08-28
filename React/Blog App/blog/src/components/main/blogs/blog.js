@@ -30,8 +30,14 @@ class Blog extends Component {
                     {blogText}
                     <button className="btn__readmore">Read More</button>
                 </div>
-                <div class="icons">
-                <i class="far fa-comment"></i>
+                <div class="icons clearfix">
+                    <div className="heart__icons"> 
+                    <i class="fas fa-heart"></i>
+                    </div>  
+                    <div class="comment__icons">
+                    <i class="far fa-comment"></i>
+                    </div>    
+                
                 </div>
 
             </div>
