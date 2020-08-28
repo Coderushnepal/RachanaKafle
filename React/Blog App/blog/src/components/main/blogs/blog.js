@@ -1,10 +1,7 @@
 import React,{Component, Fragment} from 'react';
 import { dummyBlogsData } from '../../../constants/dummyData';
-
 import "./Blog.css";
-
-
- 
+import { Counter } from '../../common';
 class Blog extends Component {
     // constructor(props){
     //     super(props); 
@@ -14,8 +11,6 @@ class Blog extends Component {
         const{blogTitle,blogText,blogImage}=this.props.info;
         console.log(blogImage)
         return (
-            // <Fragment>
-            // <div class="main">
             <div className="card">
 
                 <div class="blog__image">
@@ -32,17 +27,16 @@ class Blog extends Component {
                 </div>
                 <div class="icons clearfix">
                     <div className="heart__icons"> 
-                    <i class="fas fa-heart"></i>
+                    {/* <i class="fas fa-heart"></i> */}
                     </div>  
                     <div class="comment__icons">
                     <i class="far fa-comment"></i>
                     </div>    
-                
                 </div>
+                <Counter />
 
             </div>
-            // </div>
-            // </Fragment>
+            
         );
     }
  

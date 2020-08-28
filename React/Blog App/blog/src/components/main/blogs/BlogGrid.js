@@ -3,7 +3,8 @@ import React ,{ Component } from 'react';
 // import InfiniteScroll from "react-infinite-scroll-component"
 import {dummyBlogsData} from "../../../constants/dummyData"
 import Blog from "./blog"
-import { Header } from '../../common';
+import { Header} from '../../common';
+
 
 
  
