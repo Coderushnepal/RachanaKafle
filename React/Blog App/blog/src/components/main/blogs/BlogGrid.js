@@ -24,7 +24,6 @@ import { Header} from '../../common';
   };
 }
  
-scrollPartnerRef=null
  
 //dummydata call
 fetchBlogs=async() => {
@@ -62,7 +61,6 @@ setSearchText = (searchText) => {
          <div>
            <Header setSearchText={this.setSearchText}  />
            <main>
-          {/* ref={(r) =>(this.scrollPartnerRef=r)} */}
             {this.state.blogs.map(blog => (
               <Blog key={blog.id} info={blog} /> 
             ))}

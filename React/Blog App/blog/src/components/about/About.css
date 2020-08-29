@@ -1,0 +1,30 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+.container__about {
+    overflow: hidden;
+    margin:40px; 
+}
+.clearfix:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.description {
+    float: left;
+    width:45%;
+}
+.profile {
+    width:45%;
+    float:right;
+   
+
+}
+.profile img {
+    border-radius: 50%;
+    height:50%;
+    width:60%;
+
+}
