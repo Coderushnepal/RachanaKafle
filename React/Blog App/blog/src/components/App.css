@@ -2,7 +2,8 @@
 
 body {
   background-color:#fff6d0;
-  /* font-family: 'Oswald,sans-serif'; */
+  font-family: 'Alata', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 .App {
   width:90%;

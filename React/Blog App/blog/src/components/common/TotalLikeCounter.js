@@ -4,15 +4,12 @@ import {counterActions} from "../../actions";
 import { connect } from 'react-redux';
 const Counter = ({count,actions}) => (
     <div>
-        <span
-        style={{
-            float:"left",
-            fontSize: "25px",
-            color:"red",
-        }}
-         onClick={actions.increaseCount}    
-        >
-         <i class="fas fa-heart"></i> {count}</span>
+         <span
+        onClick={actions.increaseCount}   
+       >
+        {/* <i class="fas fa-heart"></i> {count}</span> */}
+      
+        Total Liked{count}</span>
     </div>
 );
 

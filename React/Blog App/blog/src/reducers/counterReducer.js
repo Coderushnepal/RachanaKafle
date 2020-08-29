@@ -1,4 +1,4 @@
-import {COUNTER_INCREMENT} from "../constants/actions"
+import {TOTAL_COUNTER} from "../constants/actions"
 
 const initialState ={
     count:0,
@@ -7,7 +7,7 @@ const initialState ={
 
 const counterReducer =(state=initialState,action) => {
 switch (action.type){
-    case COUNTER_INCREMENT:
+    case TOTAL_COUNTER:
         return {
             ...state ,
              count:state.count+1,

@@ -2,7 +2,7 @@
 import React ,{ Component } from 'react';
 import {dummyBlogsData} from "../../../constants/dummyData"
 import Blog from "./blog"
-import { Header} from '../../common';
+import { Header, Counter} from '../../common';
 
 
  function searchingFor(searchText) {
@@ -62,8 +62,11 @@ setSearchText = (searchText) => {
             )}
 
         </main> 
+        <Counter />
+     
          
         </div>
+        
        ); 
    }
 }

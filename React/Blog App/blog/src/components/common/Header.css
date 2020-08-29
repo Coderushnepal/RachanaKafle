@@ -5,7 +5,8 @@
     clear: both;
 }
 .header {
-    background-color:green;
+    /* background-color:green; */
+    background-color:#2E8B57;
     padding:22px;
 }
 .header__top ,.header__bottom{
@@ -22,21 +23,19 @@
 .btn__login {
     float:right;
     border-radius: 25px;
-	background: #38a3f1;
+	background: #0d73e0;
     color: #ffffff;
     font-size: 20px;
     padding: 8px 25px;
     margin-top: 4px;
     margin-right:3px;
-    border: 2px solid goldenrod;
+    border: 2px solid grey;
     position: absolute;
     top:3px;
     
 }
 
 .navbar {
-    display: flex;
-    flex-direction:row;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -65,8 +64,8 @@ color:white;
 }
  
 .navbar li a:hover {
-    /* background-color:brown; */
-    background-color:#D2691E
+    background-color:#3e8105;
+    /* background-color:#D2691E */
   }
  
 
@@ -79,7 +78,7 @@ color:white;
 .search-bar input {
     padding:10px 30px;
     border-radius:20px;
-    border: 2px solid goldenrod;
+    border: 2px solid grey;
     margin-bottom: 3px;
     font-size: 17px;
 }

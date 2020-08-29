@@ -1,1 +1,1 @@
-export const COUNTER_INCREMENT="counter/increment";
+export const TOTAL_COUNTER="counter/total";
