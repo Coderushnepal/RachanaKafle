@@ -1,11 +1,12 @@
+
 import React,{Component, Fragment} from 'react';
 import { dummyBlogsData } from '../../../constants/dummyData';
 import "./Blog.css";
 import { Counter } from '../../common';
 class Blog extends Component {
     // constructor(props){
-    //     super(props); 
-    //     }
+    //     super(props);
+    // }
  
     render(){
         const{blogTitle,blogText,blogImage}=this.props.info;

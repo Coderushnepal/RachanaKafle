@@ -2,28 +2,36 @@
     margin:0px;
     padding:0px;
 }
-.container__contact{
-    overflow: hidden;
-    margin:40px; 
-    box-sizing: border-box;  
-}
 .clearfix:after {
     content:"";
     display: block;
     clear: both;
 }
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+.container__contact{
+    overflow: hidden;
+    margin:40px; 
+    box-sizing: border-box;  
+}
+
 .contact__information{
     width:50%;
-    float:left;
 }
 .contact__form {
     width:50%;
-    float:right;
     border-radius: 5px;
-    background-color: #f2f2f2;
-    box-shadow: 2px 2px 2px 10px  #f2f2f2;
+    background-color: white;
+    /* box-shadow: 10px 10px 10px 20px white; */
+    box-shadow: 10px  white;
 }
-
+.contact__form h1 {
+    text-align: center;
+}
 
 input[type=text], textarea {
     width: 100%;
@@ -47,7 +55,70 @@ input[type=text], textarea {
   input[type=submit]:hover {
     background-color: #45a049;
   }
-  .contact_icons {
-      font-size: 25px;
-      color:blue;
-  }
+
+.social__media {
+    display: inline-block;
+    margin-right: 1em;
+    background-color: white;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #b3bdc6;
+    border-radius: 50%;
+}
+
+.social__media:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.social__media a {
+    color: #57d131;
+    margin: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+.contact__information div:last-child {
+    margin-right: 0;
+}
+
+
+.social__media {
+    display: inline-block;
+    margin-right: 6px;
+    background-color: white;
+    text-align: center;
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b3bdc6;
+    border-radius: 50%;
+}
+
+.social__media:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.social__media a {
+    color: #57d131;
+    margin: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+
+
+.contact__medium i {
+    color: #57d131;
+    padding:7px;
+}

@@ -1,13 +1,16 @@
 
 import React ,{ Component } from 'react';
-// import InfiniteScroll from "react-infinite-scroll-component"
 import {dummyBlogsData} from "../../../constants/dummyData"
 import Blog from "./blog"
 import { Header} from '../../common';
 
 
+ function searchingFor(searchText) {
+  return function(x) {
+      return x.blogTitle.toLowerCase().includes(searchText.toLowerCase()||searchText)
+  }
+}
 
- 
  class BlogGrid extends Component {
   constructor(props){
     super(props)
@@ -17,10 +20,6 @@ import { Header} from '../../common';
     //data 
     blogs:[],
     searchFor:"",
-
-    // //infinite scroll
-    // pageInfo:{page:0,size:3},
-    // hasMore:true,
   };
 }
  
@@ -40,34 +39,34 @@ componentDidMount() {
  
 } 
 
-// fetchBlogsByName =async () => {
-
-// }
 
 setSearchText = (searchText) => {
   this.setState(
     {
       searchFor: searchText,
-    },
-    () => {
-      this.fetchBlogs();
-    }  
+    }
+    // () => {
+    //   this.fetchBlogs();
+    // }  
   );
 };
  
    render(){
-    // const { isLoading } = this.state;
+    const { searchFor,blogs} = this.state;
        return(
          <div>
            <Header setSearchText={this.setSearchText}  />
            <main>
-            {this.state.blogs.map(blog => (
+            {blogs.filter(searchingFor(searchFor)).map(blog => 
               <Blog key={blog.id} info={blog} /> 
-            ))}
+            )}
+
         </main> 
-         ) 
+         
         </div>
        ); 
    }
- }
+}
  export default BlogGrid
+
+

@@ -9,18 +9,35 @@ class Contact extends Component {
         return(
             <div>
                <ContactHeader />
-               <div className="container__contact">
-                   <div className="contact__information">
-                   <i class="fas fa-envelope-square"></i> rachanakafle32@gmail.com<br></br>
-                   <i class="fas fa-phone"></i>+977 98111111111<br></br>
-                   <div class="contact_icons">
-{/* <Link href=""> <i class="fab fa-facebook">https://www.facebook.com/profile.php?id=100005656457913</i></Link> */}
-                    <i class="fab fa-facebook"></i>
-                   <i class="fab fa-twitter-square"></i>
-                   <i class="fab fa-linkedin"></i>
+               <div className="container__contact clearfix">
+                   <div className="contact__information left">
+                        <div className="contact__medium">
+                            <i class="fas fa-envelope-square"></i>rachanakafle32@gmail.com
+                        </div> 
+                        <div className="contact__medium">
+                        <i class="fas fa-phone"></i>+977 98111111111
+                        </div>  
+                        <div class="social__icons">
+                        <div class='social__media'>
+                            <a href="https://www.facebook.com/profile.php?id=100005656457913"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class='social__media'>
+                            <a href="https://www.instagram.com/rachana_kafle/?hl=en">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class='social__media'>
+                            <a href="https://www.linkedin.com/in/rachanakafle/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+               </div>
+
+
+
                    </div>
-                   </div>
-                <div className="contact__form">
+                <div className="contact__form right">
+                    <h1>Contact Form</h1>
                    <form>
                 <label>
                     Full Name:

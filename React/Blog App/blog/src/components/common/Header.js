@@ -34,8 +34,8 @@ class Header extends  Component {
                     <button class="btn__login">Login</button>
 
                 </div>
-                 <div className="header__bottom">
-                    <ul className="navbar"> 
+                 <div className="header__bottom clearfix ">
+                    <ul className="navbar left"> 
                             <li>
                             <Link to={routes.HOME} title="Home">Home</Link>
                             </li>
@@ -46,7 +46,7 @@ class Header extends  Component {
                             <Link to={routes.CONTACT} title="About">contact Me</Link>
                             </li>
                      </ul> 
-                    <div className="search__bottom ">
+                    <div className="search__bottom  right">
                         <form  onSubmit={this.search} className="search-bar">
                             <input type="search"
                              placeholder="Search blog here"
