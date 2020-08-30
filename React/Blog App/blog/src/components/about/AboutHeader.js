@@ -13,7 +13,7 @@ class AboutHeader extends  Component {
                 <div className="container">
                 <div className="header__top clearfix">
                     <h1>About Me</h1>
-                    <button class="btn__login">Login</button>
+                    {/* <button class="btn__login">Login</button> */}
 
                 </div>
                  <div className="header__bottom">
