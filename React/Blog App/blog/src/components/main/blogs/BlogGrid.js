@@ -2,7 +2,7 @@
 import React ,{ Component } from 'react';
 import {dummyBlogsData} from "../../../constants/dummyData"
 import Blog from "./blog"
-import { Header, Counter} from '../../common';
+import { Header} from '../../common';
 
 
  function searchingFor(searchText) {
@@ -61,10 +61,7 @@ setSearchText = (searchText) => {
               <Blog key={blog.id} info={blog} /> 
             )}
 
-        </main> 
-        <Counter />
-     
-         
+        </main>   
         </div>
         
        ); 

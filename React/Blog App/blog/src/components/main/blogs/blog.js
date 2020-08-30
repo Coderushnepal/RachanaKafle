@@ -1,9 +1,6 @@
 
-import React,{Component, Fragment} from 'react';
-import { dummyBlogsData } from '../../../constants/dummyData';
+import React,{Component} from 'react';
 import "./Blog.css";
-import { Counter } from '../../common';
-import WithCount from "../../HOC/WithCount"
 import LikeCounter from '../../HOC/LikeCounter';
 class Blog extends Component {
     // constructor(props){
@@ -29,15 +26,16 @@ class Blog extends Component {
                     <button className="btn__readmore">Read More</button>
                 </div>
                 < LikeCounter />
-                <div class="icons clearfix">
+
+                {/* <div class="icons clearfix">
                     <div className="heart__icons"> 
                     {/* <i class="fas fa-heart"></i>  */}
-                    </div>  
-                    <div class="comment__icons">
+                    {/* </div>  
+                    <div class="comment__icons"> */}
                     {/* <i class="far fa-comment"></i> */}
-                    </div>    
-                </div>
-                {/* <Counter /> */}
+                    {/* </div>     */}
+                {/* // </div> */} 
+        
 
             </div>
             
@@ -46,6 +44,5 @@ class Blog extends Component {
  
 }
  
-// export default WithCount(Blog)
 export default Blog
 

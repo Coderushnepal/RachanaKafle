@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
 import withCount from './WithCount'; 
-import Counter from '../common/TotalLikeCounter'
+
 
 class LikeCounter extends Component {
-    constructor(props){
-        super(props);
-    }
+
     render(){
         return (
             <div>

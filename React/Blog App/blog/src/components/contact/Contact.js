@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import { Header, Loader } from "../common";
+import { Loader } from "../common";
 import ContactHeader from "./ContactHeader";
 import "./Contact.css";
 import iziToast from 'izitoast';
