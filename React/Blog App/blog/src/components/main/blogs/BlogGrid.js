@@ -2,7 +2,7 @@
 import React ,{ Component } from 'react';
 import {dummyBlogsData} from "../../../constants/dummyData"
 import Blog from "./blog"
-import { Header} from '../../common';
+import { Header, Spinner} from '../../common';
 
 
  function searchingFor(searchText) {
@@ -20,6 +20,7 @@ import { Header} from '../../common';
     //data 
     blogs:[],
     searchFor:"",
+    isLoading: true,
   };
 }
  
@@ -52,16 +53,24 @@ setSearchText = (searchText) => {
 };
  
    render(){
-    const { searchFor,blogs} = this.state;
+    const { searchFor,blogs,isLoading} = this.state;
        return(
          <div>
            <Header setSearchText={this.setSearchText}  />
-           <main>
-            {blogs.filter(searchingFor(searchFor)).map(blog => 
-              <Blog key={blog.id} info={blog} /> 
-            )}
+          {/* <Spinner/> */}
 
-        </main>   
+          {isLoading ? (
+                     <Spinner />
+                 ) : (
+
+
+                    <main>
+                      {blogs.filter(searchingFor(searchFor)).map(blog => 
+                        <Blog key={blog.id} info={blog} /> 
+                      )}
+                      </main>  
+                  )} 
+ 
         </div>
         
        ); 

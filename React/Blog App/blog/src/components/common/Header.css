@@ -76,9 +76,11 @@ color:white;
 }
 
 .search-bar input {
-    padding:10px 30px;
+    padding:10px 20px;
     border-radius:20px;
     border: 2px solid grey;
     margin-bottom: 3px;
     font-size: 17px;
 }
+
+
