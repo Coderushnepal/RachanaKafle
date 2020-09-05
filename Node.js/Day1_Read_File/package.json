@@ -1,0 +1,8 @@
+{
+  "name": "read_file",
+  "version": "1.0.0",
+  "description": "read file sychronously and asychronously",
+  "main": "http.js",
+  "license": "MIT",
+  "private": false
+}

@@ -1,0 +1,27 @@
+{"message":"Fetching all users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"fetching user information with id ${userId","level":"info"}
+{"message":"fetching user information with id ${userId}","level":"info"}
+{"message":"fetching user information with id $(userId)","level":"info"}
+{"message":"fetching user information with id $(userId)","level":"info"}
+{"message":"Fetching user information with id ${userId}","level":"error"}
+{"message":"fetching user information with id {userId}","level":"info"}
+{"message":"Fetching user information with id ${userId}","level":"error"}
+{"message":"fetching user information with id {userId}","level":"info"}
+{"message":"fetching user information with id ${userId}","level":"info"}
+{"message":"fetching user information with id ${userId}","level":"info"}
+{"message":"fetching user information with id 2","level":"info"}
+{"message":"fetching user information with id 9","level":"info"}
+{"message":"Fetching user information with id 9","level":"error"}
+{"message":"fetching user information with id 9","level":"info"}
+{"message":"Fetching user information with id 9","level":"error"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"fetching user information with id 2","level":"info"}
+{"message":"fetching user information with id 5","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"fetching user information with id 6","level":"info"}
+{"message":"fetching user information with id 3","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Fetching all users","level":"info"}
