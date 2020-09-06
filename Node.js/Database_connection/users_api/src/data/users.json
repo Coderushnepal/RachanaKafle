@@ -1,0 +1,37 @@
+[
+  {
+    "id": 2,
+    "firstName": "Ramesh",
+    "lastName": "Nepal",
+    "phoneNumbers": []
+  },
+  {
+    "id": 3,
+    "firstName": "Nisma",
+    "lastName": "Acharya",
+    "phoneNumbers": [
+      {
+        "number": 98776655679,
+        "type": "cell"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "firstName": "Rachana",
+    "lastName": "kafle",
+    "phoneNumbers": []
+  },
+  {
+    "id": 5,
+    "firstName": "Kranti",
+    "lastName": "shrestha",
+    "phoneNumbers": []
+  },
+  {
+    "id": 6,
+    "firstName": "Kranti",
+    "lastName": "shrestha",
+    "phoneNumbers": []
+  }
+]
