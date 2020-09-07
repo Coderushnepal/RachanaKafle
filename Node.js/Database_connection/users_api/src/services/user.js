@@ -1,6 +1,7 @@
 // import User from '../models/User';
 
 import * as User from "../models/User";
+import * as UserPhoneNumber from "../models/UserPhoneNumbers"
 import logger from '../utils/logger';
 import NotFoundError from '../utils/NotFoundError';
 import usersJson from '../data/users.json';
@@ -44,19 +45,70 @@ export  async function getUserById(userId) {
 }
 
 
-/**
-     * Create a user
-     * 
-     * @param params 
-     */
-    export async function createUser(params) {
-    const data =await User.create(params);
+// /**
+//      * Create a user
+//      * 
+//      * @param params 
+//      */
+//     export async function createUser(params) {
+//     const {firstName,lastName,email,password,phoneNumbers} =params; 
+//     const userInsertData=await User.create({
+//       firstName,
+//       lastName,
+//       email,
+//       password
+//     });
 
-      return {
-        data,
-        message: "New user added successfully",
-    }
-  }  
+//     const insertDataForPhoneNumbers=phoneNumbers.map(phone=>({
+//       userId:userInsertData.id,
+//       phoneNumbers:phone.number,
+//       type:phone.type
+
+//     }));
+
+//     const phoneNumbersInsertData=await UserPhoneNumber.add(insertDataForPhoneNumbers)
+     
+
+//       return {
+//         data:params,
+//         message: "New user added successfully",
+//     }
+//   }  
+
+
+// /**
+//  * Create a user.
+//  * @param  params
+//  */
+export async function createUser(params) {
+  const { firstName, lastName, email, password, phoneNumbers } = params;
+  const userInsertData = await User.create({
+    firstName,
+    lastName,
+    email,
+    password,
+  });
+
+  const insertDataForPhoneNumbers = phoneNumbers.map((phone) => ({
+    userId: userInsertData.id,
+    phoneNumber: phone.number,
+    type: phone.type,
+  }));
+
+  console.log(insertDataForPhoneNumbers);
+
+  const phoneNumberInsertedData = await UserPhoneNumber.add(
+    insertDataForPhoneNumbers
+  );
+
+  console.log(phoneNumberInsertedData);
+
+  return {
+    data: params,
+    message: "New user added successfully",
+  };
+}
+
 
 
 /**
