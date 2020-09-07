@@ -44,42 +44,6 @@ export  async function getUserById(userId) {
   };
 }
 
-
-// /**
-//      * Create a user
-//      * 
-//      * @param params 
-//      */
-//     export async function createUser(params) {
-//     const {firstName,lastName,email,password,phoneNumbers} =params; 
-//     const userInsertData=await User.create({
-//       firstName,
-//       lastName,
-//       email,
-//       password
-//     });
-
-//     const insertDataForPhoneNumbers=phoneNumbers.map(phone=>({
-//       userId:userInsertData.id,
-//       phoneNumbers:phone.number,
-//       type:phone.type
-
-//     }));
-
-//     const phoneNumbersInsertData=await UserPhoneNumber.add(insertDataForPhoneNumbers)
-     
-
-//       return {
-//         data:params,
-//         message: "New user added successfully",
-//     }
-//   }  
-
-
-// /**
-//  * Create a user.
-//  * @param  params
-//  */
 export async function createUser(params) {
   const { firstName, lastName, email, password, phoneNumbers } = params;
   const userInsertData = await User.create({
