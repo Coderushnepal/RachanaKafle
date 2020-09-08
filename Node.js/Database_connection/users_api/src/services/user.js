@@ -13,7 +13,15 @@ import usersJson from '../data/users.json';
  */
 export async function getAllUsers() {
     logger.info("Fetching all users")
-    const data= await User.getAll();
+    const users= await User.getAll();
+    const data=users.map(user =>{
+      const { phoneNumbers}=user;
+      const hasEmptyPhoneNumber=Object.keys(phoneNumbers[0]).length===0;
+      return {
+        ...user,
+        phoneNumbers:hasEmptyPhoneNumber ? []:phoneNumbers
+      };
+    })
 
    return {
       data,
@@ -36,9 +44,13 @@ export  async function getUserById(userId) {
 
     throw new NotFoundError(`Cannot find the user with id ${userId}`);
   }
+  const phoneNumbers =await UserPhoneNumber.getPhoneNumbersByUserId(userId);
 
   return {
-    data: result,
+    data:{
+      ...result,
+      phoneNumbers
+    },
     message: `Information about userId ${userId}`,
    
   };
@@ -65,7 +77,7 @@ export async function createUser(params) {
     insertDataForPhoneNumbers
   );
 
-  console.log(phoneNumberInsertedData);
+  // console.log(phoneNumberInsertedData);
 
   return {
     data: params,
@@ -79,23 +91,24 @@ export async function createUser(params) {
  * Delete a user
  * @param userId 
  */
-export function deleteUser(userId) {
-  const doesUserExist = usersJson.find(user => user.id === userId);
+export async function deleteUser(userId) {
+  
+logger.info(`Fetching user information with id ${userId}`);
 
-  if(!doesUserExist) {
-    logger.error(`Cannot find user with id ${userId}`);
-    
-    throw new Error(`Cannot find user with id ${userId}`);
-  }
+const result = await User.getById(userId);
 
-  const updatedUsersList = usersJson.filter(user => user.id !== userId);
+if(!result) {
+logger.error(`Cannot find the user with id ${userId}`);
 
-  fs.writeFileSync(usersJsonPath, JSON.stringify(updatedUsersList, null, 2));
-
-  return {
-    message: "Deleted user with id " + userId
-  };
+ throw new NotFoundError(`Cannot find the user with id ${userId}`);
 }
+
+await User.remove(userId);
+
+return {
+  message: "Deleted user with id " + userId
+};
+ }
 
 
 /**

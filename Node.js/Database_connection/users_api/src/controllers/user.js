@@ -53,15 +53,10 @@ userService
  * @param next 
  */
 export function deleteUser(req, res, next) {
-  const userId = +req.params.userId;
-
-  try {
-    const data = userService.deleteUser(userId);
-
-    res.json(data);
-  } catch(err) {
-    next(err);
-  }
+  userService
+  .deleteUser(+req.params.userId)
+  .then(data =>res.json(data))
+  .catch(err => next(err))
 }
 
 /**
