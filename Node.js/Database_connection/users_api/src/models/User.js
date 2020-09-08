@@ -2,6 +2,7 @@ import connection from "../db";
 import snakeize from 'snakeize';
 import camelize from 'camelize';
 import {FETCH_USERS_WITH_PHONE_NUMBERS} from '../db/queries/user';
+import { func } from "joi";
 
 const table = "users";
 
@@ -27,3 +28,6 @@ export async function create(params) {
     .where({id: userId});
 }
    
+export async function update(userId,params) {
+  return connection(table).update(snakeize(params)).where(({id:userId}));
+}

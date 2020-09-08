@@ -35,15 +35,7 @@ export async function getAllUsers() {
  * @param userId 
  */
 export  async function getUserById(userId) {
-  logger.info(`Fetching user information with id ${userId}`);
-
-  const result = await User.getById(userId);
-
-  if(!result) {
-    logger.error(`Cannot find the user with id ${userId}`);
-
-    throw new NotFoundError(`Cannot find the user with id ${userId}`);
-  }
+  const result =await verifyUserExistence(userId);
   const phoneNumbers =await UserPhoneNumber.getPhoneNumbersByUserId(userId);
 
   return {
@@ -92,47 +84,41 @@ export async function createUser(params) {
  * @param userId 
  */
 export async function deleteUser(userId) {
-  
-logger.info(`Fetching user information with id ${userId}`);
+  await verifyUserExistence(userId)
+  await User.remove(userId);
 
-const result = await User.getById(userId);
-
-if(!result) {
-logger.error(`Cannot find the user with id ${userId}`);
-
- throw new NotFoundError(`Cannot find the user with id ${userId}`);
-}
-
-await User.remove(userId);
-
-return {
-  message: "Deleted user with id " + userId
-};
+  return {
+    message: "Deleted user with id " + userId
+  };
  }
 
 
-/**
- * Update a user
- * 
- * @param userId 
- * @param params 
- */
-export function updateUser(userId, params) {
-  const updatedJson = usersJson.map(user => {
-    if(user.id === userId) {
-      return {
-        ...user,
-        ...params
-      };
-    }
+export async function updateUser(userId, params) {
+  const result = await verifyUserExistence(userId);
 
-    return user;
-  });
-
-  fs.writeFileSync(usersJsonPath, JSON.stringify(updatedJson, null, 2));
+  await User.update(userId, params);
 
   return {
-    message: "Updated user with id " + userId
+    data: {
+      ...result,
+      ...params,
+    },
+    message: "Updated user with id" + userId,
   };
 }
-    
+
+
+
+async function verifyUserExistence(userId) {
+  logger.info(`Fetching user information with id ${userId}`);
+
+  const result = await User.getById(userId);
+
+  if(!result) {
+  logger.error(`Cannot find the user with id ${userId}`);
+
+  throw new NotFoundError(`Cannot find the user with id ${userId}`);
+  }
+  return result;
+
+}
