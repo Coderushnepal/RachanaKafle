@@ -2,8 +2,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
-import routes from './src/routes';
-import genericErrorHandler from './src/middlewares/genericErrorHandler';
+import routes from './routes';
+import genericErrorHandler from './middlewares/genericErrorHandler';
+
+
 
 //Middleware
 const loggingMiddleware = (req, res, next) => {
@@ -23,6 +25,6 @@ app.use(genericErrorHandler);
 
 dotenv.config();
 
-app.listen(process.env.APP_PORT,() =>{
-    console.log(`Listening on port ${process.env.APP_PORT}`)
+app.listen(process.env.PORT,() =>{
+    console.log(`Listening on port ${process.env.PORT}`)
 })

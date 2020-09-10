@@ -6,11 +6,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "nodemon --watch index.js --watch src/ --exec babel-node index.js",
-    "migrate": "knex migrate:latest --knexfile src/knexfile.js",
-    "rollback": "knex migrate:rollback --knexfile src/knexfile.js"
-
-
+    "start:dev": "nodemon --watch index.js --watch src/ --exec babel-node index.js",
+    "start": "node dist/index.js",
+    "build": "rimraf dist && babel src  --copy-files --out-dir dist",
+    "migrate": "yarn knex migrate:latest --knexfile src/knexfile.js",
+    "rollback": "yarn knex migrate:rollback --knexfile src/knexfile.js",
+    "prettify": "yarn prettier --loglevel silent --write **/*.{js,json,md}",
+    "lint": "eslint src index.js --fix"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -31,6 +33,9 @@
     "@babel/core": "^7.11.4",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
-    "@babel/register": "^7.10.5"
+    "@babel/register": "^7.10.5",
+    "eslint": "^7.8.1",
+    "prettier": "^2.1.1",
+    "rimraf": "^3.0.2"
   }
 }

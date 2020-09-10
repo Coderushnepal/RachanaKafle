@@ -6,9 +6,15 @@ import * as endpoints from './constants/endpoints';
 
 
 const router = Router();
-// const usersJsonPath = __dirname+'/data/users.json';
-// const usersJsonPath = './data/users.json';
 
+
+router.get('/' , (request,response,next) => {
+    response.json({
+         name:'todo-api',
+         version: '1.0.0'
+     });
+ 
+ });
 
 router.get(endpoints.GET_USERS,userController.getAllUsers);
 router.get(endpoints.GET_USER_BY_ID, userController.getUserById);
