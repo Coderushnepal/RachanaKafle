@@ -1,0 +1,143 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+.clearfix:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+.container__contact{
+    /* overflow: hidden; */
+    margin:40px; 
+    box-sizing: border-box;  
+}
+
+.contact__information{
+    width:50%;
+}
+.contact__form {
+    width:40%;
+    border-radius: 5px;
+    background-color:#cdf4ab;
+    /* box-shadow: 10px 10px 10px 20px white; */
+    box-shadow: 10px  white;
+    text-align: center;
+}
+.contact__form h1 {
+    text-align: center;
+}
+
+input[type=text], textarea{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    border-color: grey;
+  }
+  input[type=email]{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    border-color: grey;
+  }
+
+
+  button[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    border-color: grey;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+.social__media {
+    display: inline-block;
+    margin-right: 1em;
+    background-color: white;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #b3bdc6;
+    border-radius: 50%;
+}
+
+.social__media:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.social__media a {
+    color: #57d131;
+    margin: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+.contact__information div:last-child {
+    margin-right: 0;
+}
+
+
+.social__media {
+    display: inline-block;
+    margin-right: 6px;
+    background-color: white;
+    text-align: center;
+
+    width: 40px;
+    height: 40px;
+    border: 1px solid #b3bdc6;
+    border-radius: 50%;
+}
+
+.social__media:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.social__media a {
+    color: #57d131;
+    margin: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+
+
+.contact__medium i {
+    color: #57d131;
+    padding:7px;
+}
+.contact__form  h1 {
+    color:#157dc3;
+}
