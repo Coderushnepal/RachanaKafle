@@ -4,9 +4,9 @@
  */
 
 export function up(knex) {
-    return knex.schema.createTable('comment',table => {
+    return knex.schema.createTable('comments',table => {
     table.increments('id');
-    table.string('username',50);
+    table.string('commented_by',50);
     table.string('comment',200)
 
     
@@ -19,5 +19,5 @@ export function up(knex) {
  */
 
 export function down(knex) {
-     return knex.schema.dropTable('comment');
+     return knex.schema.dropTable('comments');
 };

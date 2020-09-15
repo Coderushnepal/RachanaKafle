@@ -1,17 +1,10 @@
 import {Router} from 'express';
 const router= Router();
+import * as homeController from './controllers/home'
+import * as aboutController from './controllers/about'
 
-// //todo
-// router.get('/',(req,res,next) => {
-//     res.json({
-//         name:'todo-api',
-//         version:"1.0.0"
-//     })
-// })
 
-// export default router;
-
-//protfolio
+//first display
 
 router.get('/',(req,res,next) => {
     res.json({
@@ -19,6 +12,13 @@ router.get('/',(req,res,next) => {
         version:"1.0.0"
     })
 })
+
+router.post('/home',homeController.createHomePageContent);
+router.get('/home',homeController.getHomePageContent);
+router.post('/about',aboutController.createAbout);
+
+
+
 
 export default router;
 
