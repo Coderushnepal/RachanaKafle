@@ -31,7 +31,7 @@ export async function getSkillsPageContent() {
     
     }
 /**
- * get dkills by Id
+ * get skills by Id
  * @param {*} skillsId 
  * @param {*} params 
  */

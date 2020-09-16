@@ -1,8 +1,9 @@
 import {Router} from 'express';
 const router= Router();
-import * as homeController from './controllers/home'
-import * as aboutPageController from './controllers/about'
-import * as skillsPageControlller from './controllers/skills'
+import * as homeController from './controllers/home';
+import * as aboutPageController from './controllers/about';
+import * as skillsPageControlller from './controllers/skills';
+import * as blogsPageController from './controllers/blogs';
 import * as endpoints from './constants/endpoints';
 
 
@@ -39,6 +40,14 @@ router.get(endpoints.GET_SkillsPageContent,skillsPageControlller.getSkillsPageCo
 // router.get(endpoints.GET_Skills_BY_ID,skillsPageControlller.getSkillsById);
 router.put(endpoints.UPDATE_SkillsPageContent,skillsPageControlller.updateSkillsPageContent);
 router.delete(endpoints.DELETE_SkillsPageContent,skillsPageControlller.deleteSkillsPageContent);
+
+/**
+ * routes for blogs page
+ */
+router.post(endpoints.CREATE_Blogs,blogsPageController.createBlogs);
+router.get(endpoints.GET_Blogs,blogsPageController.getBlogs);
+router.put(endpoints.UPDATE_Blogs,blogsPageController.updateBlogs);
+router.delete(endpoints.DELETE_Blogs,blogsPageController.deleteBlogs);
 
 
 
