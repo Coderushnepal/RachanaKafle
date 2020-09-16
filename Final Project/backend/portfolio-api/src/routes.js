@@ -4,6 +4,7 @@ import * as homeController from './controllers/home';
 import * as aboutPageController from './controllers/about';
 import * as skillsPageControlller from './controllers/skills';
 import * as blogsPageController from './controllers/blogs';
+import * as contactPageController from './controllers/contact'
 import * as endpoints from './constants/endpoints';
 
 
@@ -48,6 +49,14 @@ router.post(endpoints.CREATE_Blogs,blogsPageController.createBlogs);
 router.get(endpoints.GET_Blogs,blogsPageController.getBlogs);
 router.put(endpoints.UPDATE_Blogs,blogsPageController.updateBlogs);
 router.delete(endpoints.DELETE_Blogs,blogsPageController.deleteBlogs);
+
+/**
+ * routes for contact page
+ */
+router.post(endpoints.CREATE_Contact,contactPageController.createContact);
+router.get(endpoints.GET_Contact,contactPageController.getConatct);
+router.put(endpoints.UPDATE_Contact,contactPageController.updateContact);
+router.delete(endpoints.DELETE_Contact,contactPageController.deleteContact);
 
 
 
