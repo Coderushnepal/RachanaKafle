@@ -4,7 +4,8 @@ import * as homeController from './controllers/home';
 import * as aboutPageController from './controllers/about';
 import * as skillsPageControlller from './controllers/skills';
 import * as blogsPageController from './controllers/blogs';
-import * as contactPageController from './controllers/contact'
+import * as contactPageController from './controllers/contact';
+import * as CommentController from './controllers/comments';
 import * as endpoints from './constants/endpoints';
 
 
@@ -56,6 +57,13 @@ router.delete(endpoints.DELETE_Blogs,blogsPageController.deleteBlogs);
 router.post(endpoints.CREATE_Contact,contactPageController.createContact);
 router.get(endpoints.GET_Contact,contactPageController.getConatct);
 router.delete(endpoints.DELETE_Contact,contactPageController.deleteContact);
+
+/**
+ * routes for comment
+ */
+router.post(endpoints.CREATE_Comment,CommentController.createComments)
+router.get(endpoints.GET_Comment,CommentController.getComments)
+router.delete(endpoints.DELETE_Comment,CommentController.deleteComments)
 
 
 

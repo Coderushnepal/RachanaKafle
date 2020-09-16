@@ -39,3 +39,9 @@ export const CREATE_Contact = '/contact';
 export const GET_Contact = '/contact';
 export const DELETE_Contact= '/contact/:contactId';
 
+/**
+ * comment endpoints
+ */
+export const CREATE_Comment = '/comment';
+export const GET_Comment = '/comment';
+export const DELETE_Comment= '/comment/:commentId';
