@@ -37,6 +37,5 @@ export const DELETE_Blogs= '/blogs/:blogsId';
  */
 export const CREATE_Contact = '/contact';
 export const GET_Contact = '/contact';
-export const UPDATE_Contact = '/contact/:contactId';
 export const DELETE_Contact= '/contact/:contactId';
 

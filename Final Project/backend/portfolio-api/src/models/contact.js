@@ -22,16 +22,6 @@ export async function getAll() {
 }
 
 
-
-/**
- * update
- * @param {*} contactId 
- * @param {*} params 
- */
-export async function update(contactId,params) {
-    return connection(TABLE).update(snakeize(params)).where(({id:contactId}));
-  }
-
   /**
  * delete
  * @param {*} contactId 

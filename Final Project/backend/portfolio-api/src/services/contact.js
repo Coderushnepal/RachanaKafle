@@ -31,24 +31,6 @@ export async function getContact() {
     
     }
 
-
-/**
- * update Contact 
- * @param {*} contactId 
- * @param {*} params 
- */
-export async function updateContact(contactId,params) {
-    // logger.error("reached")
-    const data=await Contact.update(contactId, params);
-   
-  
-    return {
-        data,
-        message: `updated conatct  with contact id ${contactId}`,
-       
-      };
-  }    
- 
   
 /**
  * Delete a contact 

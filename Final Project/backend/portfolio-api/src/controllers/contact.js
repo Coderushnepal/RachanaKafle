@@ -29,19 +29,6 @@ export function getConatct(req, res, next) {
     .catch(err => next(err))
   }
 
-/*
- * Controller to update the conatct
- * 
- * @param req 
- * @param res 
- * @param next 
- */
-export function updateContact(req, res, next) {
-    conatctPageService
-    .updateContact(+req.params.contactId,req.body)
-    .then(data =>res.json(data))
-    .catch(err => next(err))
-  }
 
   /**
  * Controller to delete contact
