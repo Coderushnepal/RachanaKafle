@@ -21,14 +21,15 @@ export async function create(payload) {
     const result = await connection.select("*").from(TABLE)
     return camelize(result);
 }
-/**
- * getBYId
- * @param {*} id 
- */
-export async function getById(id) {
-    const result = await connection.select("*").from(TABLE).where({ id })
-    return camelize(result);
-}
+
+// /**
+//  * getBYId
+//  * @param {*} id 
+//  */
+// export async function getById(id) {
+//     const result = await connection.select("*").from(TABLE).where({ id })
+//     return camelize(result);
+// }
 
 /**
  * update
@@ -51,8 +52,3 @@ export async function remove(homeId) {
   }
 
 
-//  export async function remove(userId) {
-//     return connection(table)
-//       .update({ is_active: false })
-//       .where({id: userId});
-//   }

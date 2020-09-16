@@ -1,7 +1,7 @@
 import {Router} from 'express';
 const router= Router();
 import * as homeController from './controllers/home'
-import * as aboutController from './controllers/about'
+import * as aboutPageController from './controllers/about'
 import * as endpoints from './constants/endpoints';
 
 
@@ -15,15 +15,20 @@ router.get('/',(req,res,next) => {
     })
 })
 /**
- * routes for home page
+ * routes for homepage
  */
 router.post(endpoints.CREATE_HomePageContent,homeController.createHomePageContent);
 router.get(endpoints.GET_HomePageContent,homeController.getHomePageContent);
 router.put(endpoints.UPDATE_HomePageContent,homeController.updateHomePageContent);
 router.delete(endpoints.UPDATE_HomePageContent,homeController.deleteHomePageContent);
 
-
-router.post('/about',aboutController.createAbout);
+/**
+ * routes for aboutpage
+ */
+router.post(endpoints.CREATE_AboutPageContent,aboutPageController.createAboutPageContent);
+router.get(endpoints.GET_AboutPageContent,aboutPageController.getAboutPageContent)
+router.put(endpoints.UPDATE_AboutPageContent,aboutPageController.updateAboutPageContent);
+router.delete(endpoints.DELETE_AboutPageContent,aboutPageController.deleteAboutPageContent);
 
 
 

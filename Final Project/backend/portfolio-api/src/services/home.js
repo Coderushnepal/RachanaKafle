@@ -14,6 +14,7 @@ export async function createHomePageContent(payload) {
         message:'Home created successfully'
     }
 }
+
 /**
  * get homepage content
  */
