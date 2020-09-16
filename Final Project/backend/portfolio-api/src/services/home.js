@@ -2,7 +2,7 @@ import * as Home from '../models/home';
 import logger from '../utils/logger';
 
 /**
- * create home
+ * create homepage content
  * @param {} payload 
  */
 
@@ -14,11 +14,12 @@ export async function createHomePageContent(payload) {
         message:'Home created successfully'
     }
 }
-
+/**
+ * get homepage content
+ */
 export async function getHomePageContent() {
 logger.info("Fetching  home page content")
 const data=await Home.getAll()
-
 return {
     data,
     message: 'Home page content received',   
@@ -26,35 +27,41 @@ return {
 
 }
 
-// export async function getAllUsers() {
-//     logger.info("Fetching all users")
-//     const users= await User.getAll();
-//     const data=users.map(user =>{
-//       const { phoneNumbers}=user;
-//       const hasEmptyPhoneNumber=Object.keys(phoneNumbers[0]).length===0;
-//       return {
-//         ...user,
-//         phoneNumbers:hasEmptyPhoneNumber ? []:phoneNumbers
-//       };
-//     })
-
-//    return {
+// export  async function getHomePageContentById(Id) {
+//     const [data] =await Home.getById(Id);
+  
+//     return {
 //       data,
-//       message: 'List of all users',   
-//       }; 
+//       message: `Information about HomeId ${Id}`,
+     
+//     };
 //   }
 
-export async function getHomeById(homeId) {
+/**
+ * update homepage content
+ * @param {*} homeId 
+ * @param {*} params 
+ */
+export async function updateHome(homeId,params) {
+    const data=await Home.update(homeId, params);
+    console.log(data)
 
-
+    return {
+        data,
+        message: `updated home with about id ${homeId}`,
+       
+      };
 }
 
+/**
+ * Delete a homepage content
+ * @param HomeId 
+ */
+export async function deleteHomePageContent(homeId) {
+  await Home.remove(homeId);
 
-export async function updateHome(homeId,updateParams) {
+  return {
+    message: "Deleted homepage content with id " + homeId
+  };
+ }
 
-}
-
-
-export async function deleteHome(homeId) {
-
-}
