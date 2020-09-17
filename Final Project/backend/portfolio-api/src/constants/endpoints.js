@@ -45,3 +45,11 @@ export const DELETE_Contact= '/contact/:contactId';
 export const CREATE_Comment = '/comment';
 export const GET_Comment = '/comment';
 export const DELETE_Comment= '/comment/:commentId';
+
+/**
+ * admin login endpoints
+ */
+export const CREATE_LoginCredentials= '/login';
+export const GET_LoginCredentials= '/login';
+export const UPDATE_LoginCredentials= '/login/:loginId';
+export const DELETE_LoginCredentials='/login/:loginId';
