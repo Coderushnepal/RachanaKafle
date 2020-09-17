@@ -49,7 +49,8 @@ export const DELETE_Comment= '/comment/:commentId';
 /**
  * admin login endpoints
  */
-export const CREATE_LoginCredentials= '/login';
-export const GET_LoginCredentials= '/login';
-export const UPDATE_LoginCredentials= '/login/:loginId';
-export const DELETE_LoginCredentials='/login/:loginId';
+export const CREATE_LoginCredentials= '/admin';
+export const LOGIN = '/admin/login';
+export const GET_LoginCredentials= '/admin';
+export const UPDATE_LoginCredentials= '/admin/:loginId';
+export const DELETE_LoginCredentials='/admin/:loginId';

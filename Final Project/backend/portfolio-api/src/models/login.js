@@ -3,6 +3,25 @@ import camelize from 'camelize';
 import connection from '../connection';
 
 const TABLE ='login';
+
+/**
+ * get email 
+ * @param {*} email 
+ */  
+export async function getByEmail(email) {
+    const [result] = await connection.select("*").from(TABLE).where({ email });
+  
+    return result ? camelize(result) : null;
+  }
+  
+
+
+
+
+
+
+
+
 /**
  * create
  * @param {*} payload 
@@ -40,3 +59,4 @@ export async function remove(loginId) {
       .delete()
       .where({id: loginId});
   }
+

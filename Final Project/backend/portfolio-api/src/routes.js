@@ -72,6 +72,7 @@ router.delete(endpoints.DELETE_Comment,CommentController.deleteComments);
  * routes for login
  */
 router.post(endpoints.CREATE_LoginCredentials,LoginController.createAdminLogin)
+router.post(endpoints.LOGIN,LoginController.login);
 router.get(endpoints.GET_LoginCredentials,LoginController.getAdminLogin);
 router.put(endpoints.UPDATE_LoginCredentials,LoginController.updateAdminLogin);
 router.delete(endpoints.DELETE_LoginCredentials,LoginController.deleteAdminLogin);

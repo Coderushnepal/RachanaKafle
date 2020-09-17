@@ -1,6 +1,9 @@
 import * as Login from '../models/login';
 import * as crypt from '../utils/crypt';
 import logger from '../utils/logger';
+import BadRequestError from '../utils/BadRequestError';
+import { generateToken } from '../utils/jwt';
+
 
 
 
@@ -65,3 +68,45 @@ export async function deleteAdminLogin(loginId) {
       message: "Deleted admin login credentials"
     };
    }
+
+
+
+
+export async function login(payload) {
+  const { email, password } = payload;
+
+  logger.info("Checking if the email is valid");
+
+  const adminLogin=await Login.getByEmail(email)
+  // console.log(isEmailValid)
+
+  if (!adminLogin) {
+    logger.error("Invalid credentials");
+
+    throw new BadRequestError("Invalid credentials");
+  }
+
+  const isPasswordValid = crypt.compare(password, adminLogin.password);
+  // console.log(isPasswordValid)
+
+  if (!isPasswordValid) {
+    logger.error("Invalid credentials");
+
+    throw new BadRequestError("Invalid credentials");
+  }
+
+  const tokenPayload = {
+    id: Login.id,
+    email: Login.email,
+  };
+
+  const token = generateToken(tokenPayload);
+
+  return {
+    data: {
+      ...tokenPayload,
+      token,
+    },
+    message: "Logged in successfully",
+  };
+}
