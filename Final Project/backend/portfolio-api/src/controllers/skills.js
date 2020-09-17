@@ -29,19 +29,19 @@ export function getSkillsPageContent(req, res, next) {
     .catch(err => next(err))
   }
 
-//   /**
-// * Controller to get skills by Id
-// * 
-// * @param req 
-// * @param res 
-// * @param next 
-// */
-// export function getSkillsById(req, res, next) {
-//   skillsPageService
-//   .getSkillsById(+req.params.skillsId)
-//   .then(data =>res.json(data))
-//   .catch(err => next(err))
-//   }
+  /**
+* Controller to get skills by Id
+* 
+* @param req 
+* @param res 
+* @param next 
+*/
+export function getSkillsById(req, res, next) {
+  skillsPageService
+  .getSkillsById(+req.params.skillsId)
+  .then(data =>res.json(data))
+  .catch(err => next(err))
+  }
   
   /**
  * Controller to update the skills

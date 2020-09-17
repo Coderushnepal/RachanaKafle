@@ -29,6 +29,7 @@ export const DELETE_SkillsPageContent= '/skills/:skillsId';
  */
 export const CREATE_Blogs = '/blogs';
 export const GET_Blogs = '/blogs';
+export const GET_Blogs_BY_ID = '/blogs/:blogsId';
 export const UPDATE_Blogs = '/blogs/:blogsId';
 export const DELETE_Blogs= '/blogs/:blogsId';
 
@@ -37,6 +38,7 @@ export const DELETE_Blogs= '/blogs/:blogsId';
  */
 export const CREATE_Contact = '/contact';
 export const GET_Contact = '/contact';
+export const GET_Contact_BY_ID = '/contact/:contactId';
 export const DELETE_Contact= '/contact/:contactId';
 
 /**
@@ -44,6 +46,7 @@ export const DELETE_Contact= '/contact/:contactId';
  */
 export const CREATE_Comment = '/comment';
 export const GET_Comment = '/comment';
+export const GET_Comment_BY_ID = '/comment/:commentId';
 export const DELETE_Comment= '/comment/:commentId';
 
 /**

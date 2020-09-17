@@ -29,6 +29,20 @@ export function getBlogs(req, res, next) {
     .catch(err => next(err))
   }
 
+    /**
+* Controller to get blogs by Id
+* 
+* @param req 
+* @param res 
+* @param next 
+*/
+export function getBlogsById(req, res, next) {
+  blogsPageService
+  .getBlogsById(+req.params.blogsId)
+  .then(data =>res.json(data))
+  .catch(err => next(err))
+  }
+
 /*
  * Controller to update the blogs
  * 

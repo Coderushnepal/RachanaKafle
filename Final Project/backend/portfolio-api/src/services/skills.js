@@ -37,7 +37,7 @@ export async function getSkillsPageContent() {
  */
 
     export  async function getSkillsById(skillsId) {
-    const [data] =await Skills.getById(skillsId);
+    const data =await Skills.getById(skillsId);
     console.log(data)
   
     return {

@@ -31,6 +31,23 @@ export async function getBlogs() {
     
     }
 
+/**
+ * get Blogs by Id
+ * @param {*} blogsId 
+ * @param {*} params 
+ */
+
+export  async function getBlogsById(blogsId) {
+  const data =await Blogs.getById(blogsId);
+  // console.log(data)
+
+  return {
+    data,
+    message: `Blogs Id ${blogsId}`,
+   
+  };
+}
+
 
 /**
  * update Blog 

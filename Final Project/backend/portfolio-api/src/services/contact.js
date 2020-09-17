@@ -31,6 +31,22 @@ export async function getContact() {
     
     }
 
+  /**
+ * get contact message by Id
+ * @param {*} contactId 
+ * @param {*} params 
+ */
+
+export  async function getContactById(contactId) {
+  const data =await Contact.getById(contactId);
+  console.log(data)
+
+  return {
+    data,
+    message: `contact message by Id ${contactId}`,
+   
+  };
+}
   
 /**
  * Delete a contact 

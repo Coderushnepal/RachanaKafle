@@ -29,6 +29,19 @@ export function getComments(req, res, next) {
     .catch(err => next(err))
   }
 
+  /**
+* Controller to get comments by Id
+* 
+* @param req 
+* @param res 
+* @param next 
+*/
+export function getCommentById(req, res, next) {
+  commentPageService
+  .getCommentById(+req.params.commentId)
+  .then(data =>res.json(data))
+  .catch(err => next(err))
+  }
 
   /**
  * Controller to delete comment

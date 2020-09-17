@@ -22,6 +22,15 @@ export async function getAll() {
 }
 
 
+/**
+ * getBYId
+ * @param {*} id 
+ */
+export async function getById(id) {
+    const [result] = await connection.select("*").from(TABLE).where({id })
+    console.log(result)
+    return result ? camelize(result) : null;
+}
   /**
  * delete
  * @param {*} commentId 

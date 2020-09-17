@@ -30,6 +30,23 @@ export async function getComments() {
         }; 
     
     }
+  
+/**
+ * get comment by Id
+ * @param {*} commentId 
+ * @param {*} params 
+ */
+
+export  async function getCommentById(commentId) {
+  const data =await comments.getById(commentId);
+  console.log(data)
+
+  return {
+    data,
+    message: `comment Id ${commentId}`,
+   
+  };
+}    
 
   
 /**

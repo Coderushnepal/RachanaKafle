@@ -1,7 +1,7 @@
 import * as conatctPageService from '../services/contact'
 
 /**
- * Controller to  create contact.
+ * Controller to  create contact message
  * 
  * @param req
  * @param res 
@@ -15,7 +15,7 @@ export function createContact(req, res, next) {
 }
 
 /**
- * Controller to get contact.
+ * Controller to get contact message
  * 
  * @param req
  * @param res 
@@ -27,6 +27,20 @@ export function getConatct(req, res, next) {
     .getContact()
     .then(data =>res.json(data))
     .catch(err => next(err))
+  }
+
+    /**
+* Controller to get skills by Id
+* 
+* @param req 
+* @param res 
+* @param next 
+*/
+export function getContactById(req, res, next) {
+  conatctPageService
+  .getContactById(+req.params.contactId)
+  .then(data =>res.json(data))
+  .catch(err => next(err))
   }
 
 

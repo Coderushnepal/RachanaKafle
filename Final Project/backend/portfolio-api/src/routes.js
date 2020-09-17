@@ -43,7 +43,7 @@ router.delete(endpoints.DELETE_AboutPageContent,aboutPageController.deleteAboutP
  */
 router.post(endpoints.CREATE_SkillsPageContent,skillsPageControlller.createSkillsPageContent);
 router.get(endpoints.GET_SkillsPageContent,skillsPageControlller.getSkillsPageContent);
-// router.get(endpoints.GET_Skills_BY_ID,skillsPageControlller.getSkillsById);
+router.get(endpoints.GET_Skills_BY_ID,skillsPageControlller.getSkillsById);
 router.put(endpoints.UPDATE_SkillsPageContent,skillsPageControlller.updateSkillsPageContent);
 router.delete(endpoints.DELETE_SkillsPageContent,skillsPageControlller.deleteSkillsPageContent);
 
@@ -52,6 +52,7 @@ router.delete(endpoints.DELETE_SkillsPageContent,skillsPageControlller.deleteSki
  */
 router.post(endpoints.CREATE_Blogs,blogsPageController.createBlogs);
 router.get(endpoints.GET_Blogs,blogsPageController.getBlogs);
+router.get(endpoints.GET_Blogs_BY_ID,blogsPageController.getBlogsById);
 router.put(endpoints.UPDATE_Blogs,blogsPageController.updateBlogs);
 router.delete(endpoints.DELETE_Blogs,blogsPageController.deleteBlogs);
 
@@ -61,6 +62,7 @@ router.delete(endpoints.DELETE_Blogs,blogsPageController.deleteBlogs);
 router.post(endpoints.CREATE_Contact,validateContactFormCreation,contactPageController.createContact);
 // router.post(endpoints.CREATE_Contact,contactPageController.createContact);
 router.get(endpoints.GET_Contact,contactPageController.getConatct);
+router.get(endpoints.GET_Contact_BY_ID,contactPageController.getContactById);
 router.delete(endpoints.DELETE_Contact,contactPageController.deleteContact);
 
 /**
@@ -68,6 +70,7 @@ router.delete(endpoints.DELETE_Contact,contactPageController.deleteContact);
  */
 router.post(endpoints.CREATE_Comment,CommentController.createComments);
 router.get(endpoints.GET_Comment,CommentController.getComments);
+router.get(endpoints.GET_Comment_BY_ID,CommentController.getCommentById);
 router.delete(endpoints.DELETE_Comment,CommentController.deleteComments);
 
 /**
