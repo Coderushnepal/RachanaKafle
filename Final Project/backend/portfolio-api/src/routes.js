@@ -8,7 +8,9 @@ import * as contactPageController from './controllers/contact';
 import * as CommentController from './controllers/comments';
 import * as LoginController from './controllers/login';
 import * as endpoints from './constants/endpoints';
-import {validateContactFormCreation} from './schemas/contact'
+import { validateContactFormCreation } from './schemas/contact'
+import { validateLogin } from './schemas/login';
+
 
 
 
@@ -56,8 +58,8 @@ router.delete(endpoints.DELETE_Blogs,blogsPageController.deleteBlogs);
 /**
  * routes for contact page
  */
-// router.post(endpoints.CREATE_Contact,validateContactFormCreation,contactPageController.createContact);
-router.post(endpoints.CREATE_Contact,contactPageController.createContact);
+router.post(endpoints.CREATE_Contact,validateContactFormCreation,contactPageController.createContact);
+// router.post(endpoints.CREATE_Contact,contactPageController.createContact);
 router.get(endpoints.GET_Contact,contactPageController.getConatct);
 router.delete(endpoints.DELETE_Contact,contactPageController.deleteContact);
 
@@ -72,7 +74,7 @@ router.delete(endpoints.DELETE_Comment,CommentController.deleteComments);
  * routes for login
  */
 router.post(endpoints.CREATE_LoginCredentials,LoginController.createAdminLogin)
-router.post(endpoints.LOGIN,LoginController.login);
+router.post(endpoints.LOGIN,validateLogin,LoginController.login);
 router.get(endpoints.GET_LoginCredentials,LoginController.getAdminLogin);
 router.put(endpoints.UPDATE_LoginCredentials,LoginController.updateAdminLogin);
 router.delete(endpoints.DELETE_LoginCredentials,LoginController.deleteAdminLogin);
