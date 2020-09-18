@@ -4,6 +4,7 @@ import {dummyBlogsData} from "../../constants/dummyData"
 import Blog from "./Blog"
 import { Spinner} from '../common';
 import Header from './BlogHeader'
+import Footer from '../common/footer/Footer';
 
 
  function searchingFor(searchText) {
@@ -71,7 +72,7 @@ setSearchText = (searchText) => {
                       )}
                       </main>  
                   )} 
- 
+            <Footer />
         </div>
         
        ); 

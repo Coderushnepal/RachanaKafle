@@ -1,5 +1,6 @@
 import React ,{Component} from 'react';
-import { Header } from '../common';
+import Header from '../common/header/Header'
+import Footer from '../common/footer/Footer';
 import "./About.css"
 
 class About extends Component {
@@ -20,6 +21,7 @@ class About extends Component {
                         <img src="https://i.postimg.cc/vmtgXb4N/profile.jpg" alt="Rachana kafle"></img>
                      </div>
                  </div>
+                 <Footer />
             </div>
         )
     }

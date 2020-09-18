@@ -1,5 +1,8 @@
 import React ,{Component} from 'react';
-import { Header } from "../common";
+import Header from '../common/header/Header'
+
+import Footer from '../common/footer/Footer';
+
 import "./Skills.css"
 
 class Skills extends Component {
@@ -8,7 +11,10 @@ class Skills extends Component {
             <div>
                 <Header />
                 Skill page
+                <Footer/>
             </div>
+          
+    
         )
     }
 }

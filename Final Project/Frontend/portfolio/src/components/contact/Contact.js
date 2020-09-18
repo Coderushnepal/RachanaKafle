@@ -1,7 +1,9 @@
 import React,{Component} from "react";
-import { Loader,Header } from "../common";
+import { Loader} from "../common";
 import "./Contact.css";
 import iziToast from 'izitoast';
+import Header from '../common/header/Header'
+import Footer from "../common/footer/Footer";
 
 class Contact extends Component {
     constructor(props) {
@@ -106,7 +108,8 @@ class Contact extends Component {
                         <button type="submit">Submit{this.state.isLoading && <Loader />}</button>    
                     </form>
                    </div>
-               </div>             
+               </div>  
+               <Footer />           
             </div>
         )
 
