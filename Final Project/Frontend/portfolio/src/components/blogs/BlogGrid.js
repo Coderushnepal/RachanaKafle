@@ -1,15 +1,15 @@
 
 import React ,{ Component } from 'react';
-import {dummyBlogsData} from "../../constants/dummyData"
 import Blog from "./Blog"
 import { Spinner} from '../common';
 import Header from './BlogHeader'
+import { fetchBlogs  } from '../../services/blogServices'
 import Footer from '../common/footer/Footer';
 
 
  function searchingFor(searchText) {
   return function(x) {
-      return x.blogTitle.toLowerCase().includes(searchText.toLowerCase()||searchText)
+      return x.title.toLowerCase().includes(searchText.toLowerCase()||searchText)
   }
 }
 
@@ -26,31 +26,28 @@ import Footer from '../common/footer/Footer';
   };
 }
  
- 
-//dummydata call
-fetchBlogs=async() => {
-  setTimeout(()=> {
+//APi call
+ fetchBlogs=async() => {
+  // setTimeout(()=> {
+    console.log("REtriving data ")
+    const data = await fetchBlogs();
     this.setState({
-      blogs:dummyBlogsData,
+      blogs:data,
       isLoading:false,
     });
-  },1000);
+  // },1000);
 };
  
 componentDidMount() {
+  console.log("inside didMount")
   this.fetchBlogs();
- 
 } 
-
 
 setSearchText = (searchText) => {
   this.setState(
     {
       searchFor: searchText,
-    }
-    // () => {
-    //   this.fetchBlogs();
-    // }  
+    } 
   );
 };
  
@@ -58,20 +55,21 @@ setSearchText = (searchText) => {
     const { searchFor,blogs,isLoading} = this.state;
        return(
          <div>
+           {/* <Header /> */}
            <Header setSearchText={this.setSearchText}  />
-          {/* <Spinner/> */}
 
-          {isLoading ? (
+           {isLoading ? (
                      <Spinner />
                  ) : (
-
-
-                    <main>
+              <main>
+                {/* {this.state.blogs.map(blog => (
+                    <Blog key={blog.id} info={blog} /> 
+                  ))}  */}
                       {blogs.filter(searchingFor(searchFor)).map(blog => 
                         <Blog key={blog.id} info={blog} /> 
-                      )}
-                      </main>  
-                  )} 
+                      )} 
+              </main>  
+                   )}  
             <Footer />
         </div>
         
