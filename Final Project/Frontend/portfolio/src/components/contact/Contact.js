@@ -69,8 +69,8 @@ class Contact extends Component {
         return(
             <div>
                <Header />
-               <div className="container__contact clearfix">
-                   <div className="contact__information left">
+               <div className="container__contact ">
+                   <div className="contact__information ">
                         <div className="contact__medium">
                             <i class="fas fa-envelope-square"></i>rachanakafle32@gmail.com
                         </div> 
@@ -94,7 +94,7 @@ class Contact extends Component {
                </div>
 
                    </div>
-                <div className="contact__form right">
+                <div className="contact__form">
                     <h1>Contact Form</h1>
                     <form onSubmit={this.handleSubmit}>
                         <label htmlFor="name">Full Name</label><br/>

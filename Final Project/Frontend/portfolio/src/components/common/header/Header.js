@@ -9,13 +9,12 @@ import "./Header.css"
 class Header extends  Component {
    render(){
        return(
-           <header className="header">
+           <header>
                <div className="container clearfix">
-                    <div className="header__right right ">
+                    <div className="header__right right" >
                         <ul className="navbar">
                                 <li>
-                                <Link to ={routes.HOME} title="Home">HOME</Link>
-                            
+                                <Link to ={routes.HOME} title="Home">HOME</Link>              
                                 </li>
                                 <li>
                                 <Link to={routes.ABOUT} title="about">ABOUT</Link>
@@ -35,7 +34,8 @@ class Header extends  Component {
                             </ul>
                     </div>
 
-                    <div class="header__left left">
+                    <div class="header__left left" >
+                    {/* style={{paddingTop:"10px"}} */}
                         <span>RACHANA KAFLE</span>
                     </div>
                </div>

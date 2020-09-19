@@ -30,8 +30,8 @@ class Header extends  Component {
             <header className="header">
                 <div className="container">
                 <div className="header__top clearfix">
-                    <h1>Rachana's Blog</h1>
-                    <button class="btn__login">Login</button>
+                    {/* <h1>Rachana's Blog</h1> */}
+                    {/* <button class="btn__login">Login</button> */}
 
                 </div>
                  <div className="header__bottom clearfix ">

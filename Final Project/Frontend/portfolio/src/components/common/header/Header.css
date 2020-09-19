@@ -13,20 +13,18 @@
     float:right;
 }
 
-.header {
+header {
      background-color:#358173;
     padding:22px; 
 } 
 
-/* .header__right ,.header__left {
-    width:100%
-} */
 
 .navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+   
     
 }  
 
@@ -45,11 +43,22 @@ color:white;
 }
  
 .navbar li a:hover {
-    background-color:#79554e;
+    background-color:#9d4931;
+    color:white;
 }
  
+.header__left {
+    font: 400 100px/1.5; 
+    padding-top: 10px;
+    
+}
+/* .header__right {
+    padding-left: 50px;
+} */
 .header__left span {
     font-size: 20px;
     color:white;
-    font-weight: 100px;
+    font-weight: 500;
+    /* font-family: cursive; */
+
 }

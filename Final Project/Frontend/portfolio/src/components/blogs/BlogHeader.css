@@ -69,11 +69,11 @@ text-transform: uppercase;  */
   /* } */
  
 
-/* 
+
 .search__bottom {
     width:25%
-   */
-/* }
+
+ }
 
 .search-bar input {
     padding:10px 20px;
@@ -81,6 +81,6 @@ text-transform: uppercase;  */
     border: 2px solid grey;
     margin-bottom: 3px;
     font-size: 17px;
-} */
+} 
 
 

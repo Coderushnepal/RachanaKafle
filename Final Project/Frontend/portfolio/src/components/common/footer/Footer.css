@@ -3,11 +3,11 @@
 }
 
 .site-footer {
-    padding: 3em 0;
+    padding: 1em 0;
 }
 .social-box {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 1 em;
     background-color: white;
     text-align: center;
     margin-bottom: 15px;

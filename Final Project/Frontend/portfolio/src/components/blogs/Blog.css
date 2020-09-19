@@ -20,7 +20,7 @@
 .blog__title{
     text-align: center;
     padding:20px;
-    color:#157dc3;
+    color:#9d4931;
 
 }
 .blog__description {
@@ -31,8 +31,8 @@
     margin-top:30px;
     margin-bottom:30px;
     color:white;
-    background-color:#45a049;
-    border: 2px solid gray;
+    background-color:#358173;
+    border: 2px solid #358173;
     font-size: 15px;
     padding: 10px 15px;
     border-radius:20px;
