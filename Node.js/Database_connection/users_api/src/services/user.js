@@ -47,6 +47,10 @@ export  async function getUserById(userId) {
    
   };
 }
+/**
+ * create user
+ * @param {*} params 
+ */
 
 export async function createUser(params) {
   const { firstName, lastName, email, password, phoneNumbers } = params;
