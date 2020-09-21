@@ -25,7 +25,13 @@ class Header extends  Component {
         this.props.setSearchText(this.state.searchText);
     };
 
+     logout =() => {
+         localStorage.clear('Token')
+     }
+
     render(){
+        const token= localStorage.getItem('Token');
+        
         return(
             <header>
             <div className="container clearfix">
@@ -48,15 +54,18 @@ class Header extends  Component {
                              </li>
                              <li>
                                  <Link to={routes.RESUME}>RESUME</Link>
-                             </li>                              
-                             <Link to={routes.CREATEBLOG} className="btn blog__create"><i class="fas fa-plus-circle"></i></Link> 
+                             </li> 
+                                                                     
+                        <div >{ token ?
+                         <Link to={routes.CREATEBLOG} className="btn blog__create"><i class="fas fa-plus-circle"></i></Link> 
+                            :null 
+                            }      
+                         </div>
 
-                            {/*token concept   */}
-                            {/* <div >{ token ?
-                            <Link to={routes.CREATEBLOG} className="btn blog__create"><i class="fas fa-plus-circle"></i></Link> 
-                              :null 
-                            }       */}
-                            {/* </div> */}
+                        <div>
+                             <button onclick={this.logout}>Logout </button>
+                        </div>  
+                        
                          </ul>
                  </div>
 

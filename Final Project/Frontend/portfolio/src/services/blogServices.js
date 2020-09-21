@@ -6,6 +6,8 @@ export const fetchBlogs = async () => {
     const {data}=await http.get("/blogs");
     console.log(data.data);
     return  data.data;
+
+
 };
 
 
@@ -15,5 +17,6 @@ export const fetchBlogsById  = async (id) => {
     const {data} =await http.get(`/blogs/${id}`);
     return data[0];  
 }
+
 
 

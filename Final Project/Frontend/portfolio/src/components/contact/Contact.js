@@ -55,6 +55,45 @@ class Contact extends Component {
         event.preventDefault();
         
     }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        const { fullName, email,phoneNumber,message } = this.state.formData;
+        if(!fullName || !email || !phoneNumber || !message){
+            let fieldName;
+            if (!fullName) {
+                fieldName = "Name";
+            } else if (!email) {
+                fieldName = "Email";
+            } else if (!phoneNumber) {
+                fieldName = "Phonenumber";
+            } else {
+                fieldName = "Message"
+            }
+            // iziToast.setGravity(Gravity.CENTER, 0, 0);
+            iziToast.show({
+                title: 'Form wasnot submitted',
+                message: ` please fill up the ${fieldName} field`,
+            });
+        } else {
+            this.setState({
+                isLoading: true
+            })
+            setTimeout(()=> {
+                this.setState({
+                    isLoading: false
+                })
+                iziToast.show({
+                    message: `Form was successfully submitted`,
+                });
+                // iziToast.settings ({
+                //     position:"topCenter",
+                // })
+                this.props.history.push('/contact');
+            }, 4000)
+        }  
+    }
+
     
 
 
@@ -71,8 +110,11 @@ class Contact extends Component {
                             <i class="fas fa-envelope-square"></i>rachanakafle32@gmail.com
                         </div> 
                         <div className="contact__medium">
-                        <i class="fas fa-phone"></i>+977 98111111111
+                        <i class="fas fa-phone"></i>+977 9842518084
                         </div>  
+                        <div className="contact__medium">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>Sanothimi, Bhaktapur
+                        </div>
                         <div class="social__icons">
                         <div class='social__media'>
                             <a href="https://www.facebook.com/profile.php?id=100005656457913"><i class="fab fa-facebook-f"></i></a>

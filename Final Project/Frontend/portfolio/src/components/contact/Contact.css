@@ -21,13 +21,13 @@
 
  .contact__information{
     width:30%;
+    float: left;
 } 
 .contact__form {
     width:40%;
     border-radius: 5px;
     background-color:white;
     box-shadow: 20px white;
-    /* box-shadow: 10px  white; */
     text-align: center;
     margin: auto;
     padding-top: 0px;

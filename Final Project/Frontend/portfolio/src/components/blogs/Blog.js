@@ -20,6 +20,8 @@ class Blog extends Component {
 
     componentDidMount(blogId) {
         axios.get(`http://localhost:1234/blogs ${blogId}`)
+        // axios.get(`http://localhost:1234/blogs/{blogId}`)
+
         .then(res=> {
             // console.log(res.data.data);
             const blogs = res.data.data;
@@ -30,7 +32,8 @@ class Blog extends Component {
 
 
     render(){
-        const{title,description,image,read_time,published_on}=this.props.info;
+        const{title,description,image,read_time,published_on,blogId}=this.props.info;
+        console.log(this.props.info)
         return (
             <div className="card">
 
@@ -45,7 +48,12 @@ class Blog extends Component {
                 <div className="blog__description"> 
                     {description}
                     {/* <button className="btn__readmore">Read More</button> */}
-                    <Link to={routes.FullBlog} className="btn__readmore">Read More</Link>
+            {/* <Link to={routes.FullBlog} className="btn__readmore">Read More</Link> */}
+                {/* <Link to={routes.FullBlog+blogId} className="btn__readmore">Read More</Link> */}
+            <Link to={routes.FullBlog} className="btn__readmore">Read More</Link> 
+
+
+
 
                 </div>
                 < LikeCounter />     
