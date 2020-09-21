@@ -27,48 +27,57 @@ class Header extends  Component {
 
     render(){
         return(
-            <header className="header">
-                <div className="container">
-                <div className="header__top clearfix">
-                    {/* <h1>Rachana's Blog</h1> */}
-                    {/* <button class="btn__login">Login</button> */}
+            <header>
+            <div className="container clearfix">
+                 <div className="header__right right" >
+                     <ul className="navbar">
+                             <li>
+                             <Link to ={routes.HOME} title="Home">HOME</Link>              
+                             </li>
+                             <li>
+                             <Link to={routes.ABOUT} title="about">ABOUT</Link>
+                             </li>
+                             <li>
+                                 <Link to ={routes.SKILLS} title="skills">SKILLS</Link>                         
+                             </li>
+                             <li>
+                             <Link to={routes.BLOGS} title="Home">BLOGS</Link>
+                             </li>
+                             <li>
+                             <Link to={routes.CONTACT} title="About">CONTACT</Link>
+                             </li>
+                             <li>
+                                 <Link to={routes.RESUME}>RESUME</Link>
+                             </li>                              
+                             <Link to={routes.CREATEBLOG} className="btn blog__create"><i class="fas fa-plus-circle"></i></Link> 
 
-                </div>
-                 <div className="header__bottom clearfix ">
-                    <ul className="navbar left"> 
-                            <li>
-                            <Link to ={routes.HOME} title="Home">HOME</Link>
-                        
-                            </li>
-                            <li>
-                            <Link to={routes.ABOUT} title="about">ABOUT</Link>
-                            </li>
-                            <li>
-                                <Link to ={routes.SKILLS} title="skills">SKILLS</Link>                          
-                            </li>
-                            <li>
-                            <Link to={routes.BLOGS} title="Home">BLOGS</Link>
-                            </li>
-                            <li>
-                            <Link to={routes.CONTACT} title="About">CONTACT</Link>
-                            </li>
-                            <li>
-                                <Link to={routes.RESUME}>RESUME</Link>
-                            </li>              
+                            {/*token concept   */}
+                            {/* <div >{ token ?
+                            <Link to={routes.CREATEBLOG} className="btn blog__create"><i class="fas fa-plus-circle"></i></Link> 
+                              :null 
+                            }       */}
+                            {/* </div> */}
+                         </ul>
+                 </div>
 
-                     </ul> 
-                    <div className="search__bottom  right">
-                        <form  onSubmit={this.search} className="search-bar">
-                            <input type="search"
-                             placeholder="Search blog here"
-                             value={this.state.searchText} 
-                             onChange={this.handleTextChange} 
-                             />   
-                        </form>
+                 <div class="header__left left" >
+                 {/* style={{paddingTop:"10px"}} */}
+                     <span>RACHANA KAFLE</span>
+                 </div>
+
+                 <div className="search__bottom">
+                    <form  onSubmit={this.search} className="search-bar">
+                        <input type="search"
+               placeholder="Search blog here"
+                   value={this.state.searchText} 
+                          onChange={this.handleTextChange} 
+                         />   
+                     </form>
                     </div>
-                </div> 
-                </div>
-            </header>
+            </div>
+
+        </header>
+
         )
     }
 

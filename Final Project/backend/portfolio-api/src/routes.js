@@ -59,8 +59,8 @@ router.delete(endpoints.DELETE_Blogs,blogsPageController.deleteBlogs);
 /**
  * routes for contact page
  */
-router.post(endpoints.CREATE_Contact,validateContactFormCreation,contactPageController.createContact);
-// router.post(endpoints.CREATE_Contact,contactPageController.createContact);
+// router.post(endpoints.CREATE_Contact,validateContactFormCreation,contactPageController.createContact);
+router.post(endpoints.CREATE_Contact,contactPageController.createContact);
 router.get(endpoints.GET_Contact,contactPageController.getConatct);
 router.get(endpoints.GET_Contact_BY_ID,contactPageController.getContactById);
 router.delete(endpoints.DELETE_Contact,contactPageController.deleteContact);

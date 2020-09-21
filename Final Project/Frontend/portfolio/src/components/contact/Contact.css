@@ -47,7 +47,7 @@ input[type=text], textarea{
     margin-top: 6px;
     margin-bottom: 16px;
     border-radius: 15px;
-    border-color: grey;
+    border-color:#9d4931;
   }
   input[type=email]{
     width: 50%;
@@ -58,7 +58,7 @@ input[type=text], textarea{
     margin-top: 6px;
     margin-bottom: 16px;
     border-radius: 15px;
-    border-color: grey;
+    border-color: #9d4931;
   }
 
 

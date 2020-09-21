@@ -15,13 +15,6 @@ export async function getByEmail(email) {
   }
   
 
-
-
-
-
-
-
-
 /**
  * create
  * @param {*} payload 

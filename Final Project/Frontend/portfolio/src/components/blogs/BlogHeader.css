@@ -33,7 +33,7 @@
     position: absolute;
     top:3px;
     
-} */
+} 
 
 /* .navbar {
     list-style-type: none;
@@ -69,7 +69,7 @@ text-transform: uppercase;  */
   /* } */
  
 
-
+/* 
 .search__bottom {
     width:25%
 
@@ -81,6 +81,26 @@ text-transform: uppercase;  */
     border: 2px solid grey;
     margin-bottom: 3px;
     font-size: 17px;
-} 
+}  */ */
 
+
+.blog__create {
+    background-color:#54af51;
+    border-color: #54af51;
+    color:white;
+    font-size: 18px;
+    padding: 5px 7px;
+    border-radius:5px;
+    cursor: pointer;
+}
+   
+  
+.search-bar input {
+    margin-top: 4px;
+    padding:10px 20px;
+    border-radius:20px;
+    border: 2px solid white;
+    font-size: 17px;
+}  
+  
 

@@ -5,3 +5,5 @@ export const BLOGS="/blogs";
 export const CONTACT ="/contact";
 export const RESUME ="/resume";
 export const  LOGIN ="/login";
+export const CREATEBLOG='/createblog';
+export const FullBlog='/fullblog';

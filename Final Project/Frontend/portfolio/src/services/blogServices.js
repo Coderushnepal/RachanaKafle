@@ -11,10 +11,9 @@ export const fetchBlogs = async () => {
 
 
 export const fetchBlogsById  = async (id) => {
-    //call single beer async api
+    //call single blogs async api
     const {data} =await http.get(`/blogs/${id}`);
-    return data[0];
-
-    
+    return data[0];  
 }
+
 
