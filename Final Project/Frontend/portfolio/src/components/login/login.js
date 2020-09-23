@@ -20,7 +20,7 @@ class Login extends Component {
       try {
         const loginCredentials = await login(this.state.formData.email, this.state.formData.password);
         localStorage.setItem('Token', loginCredentials.token);
-        this.props.history.push('/blogs');
+        this.props.history.push('/');
       } catch (err) {
           iziToast.error({
               ttile:"Login Failed",

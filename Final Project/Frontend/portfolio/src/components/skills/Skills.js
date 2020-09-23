@@ -10,9 +10,10 @@ class Skills extends Component {
         return (
             <div>
                 <Header />
-                    <div className="skills__section container">
+                    <div class="skills__container">
+                    <div className="skills__section">
                             <div className="skill left">
-                                <img src="https://i.postimg.cc/66L24P6f/1200px-HTML5-logo-and-wordmark-svg.png"></img><br></br>
+                                <img src="https://i.postimg.cc/5y6xTpPf/html.jpg"></img><br></br>
                                 <span>HTML</span>
                             </div>
                             <div className="skill left">
@@ -20,18 +21,31 @@ class Skills extends Component {
                                 <span>CSS</span>
                             </div>
                             <div className="skill left">
-                                 <img src="https://i.postimg.cc/RZcV263Q/js.png"></img><br></br>
-                                <span>Javascript</span>
+                                 <img src="https://i.postimg.cc/wMdCcVSW/bootstrap.png"></img><br></br>
+                                <span>BOOTSTRAP</span>
                         </div>
                         <div className="skill left">
                                  <img src="https://i.postimg.cc/RZcV263Q/js.png"></img><br></br>
-                                <span>Javascript</span>
+                                <span>JAVASCRIPT</span>
                         </div>
                         <div className="skill left">
-                                 <img src="https://i.postimg.cc/RZcV263Q/js.png"></img><br></br>
-                                <span>Javascript</span>
+                                 <img src="https://i.postimg.cc/QdmjNHFB/react1.png"></img><br></br>
+                                <span>REACT</span>
                         </div>  
-                    </div>   
+                        <div className="skill left">
+                                 <img src="https://i.postimg.cc/sDnnVzVj/node.png"></img><br></br>
+                                <span>NODE</span>
+                        </div>  
+                        <div className="skill left">
+                                 <img src="https://i.postimg.cc/MKxTWk9F/python.jpg"></img><br></br>
+                                <span>PYTHON</span>
+                        </div>  
+                        <div className="skill left">
+                                 <img src="https://i.postimg.cc/4xfQHSx8/DJANGO.jpg"></img><br></br>
+                                <span>DJANGO</span>
+                        </div> 
+                    </div>  
+                    </div> 
 
 
 

@@ -5,6 +5,7 @@ import * as routes from "../../constants/routes";
 import Footer from '../common/footer';
 import Header from '../common/header/Header'
 import "./home.css";
+import Typewriter from "typewriter-effect"; 
 
 class Home extends Component {
     render(){
@@ -17,8 +18,13 @@ class Home extends Component {
                 <div className="container clearfix">
                     <div className="row"> 
                         <div className="site-text">
-                            <h2 className="site-heading">Hey I am<br></br> <strong>Rachana Kafle</strong></h2>
-                            <p className="site-subheading">I'm a passionate Software Engineer</p>
+                            <h2 className='site-heading'>
+                            <Typewriter options={{ strings: ["Hello!<br><br> I am Rachana Kafle."], autoStart: true, loop: true, }} /> 
+                            </h2>
+                        {/* <span style={{color:"white"}}>
+                            <Typewriter options={{ strings: [" I'm a passionate Software Engineer "], autoStart: true, loop: true, }} /> 
+                        </span> */}
+                            <p className="site-subheading" >I'm a passionate Software Engineer</p>
                             <Link to={routes.CONTACT} className="btn btn-primary">Contact Me</Link>
                         </div>
                     </div>

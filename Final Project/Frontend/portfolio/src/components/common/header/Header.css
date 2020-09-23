@@ -50,15 +50,36 @@ color:white;
 .header__left {
     font: 400 100px/1.5; 
     padding-top: 10px;
+    /* width:25%; */
     
 }
-/* .header__right {
-    padding-left: 50px;
-} */
+ .header__right { 
+ padding-left: 50px;
+    /* width:75%; */ 
+}
 .header__left span {
     font-size: 20px;
     color:white;
     font-weight: 500;
     /* font-family: cursive; */
 
+}
+.btn__logout {
+    background:#0E3746;
+    /* background:#; */
+    color:white;
+    /* border: 2px solid #0000FF; */
+     border: 2px solid #0E3746; 
+
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius:20px;
+    cursor: pointer;
+
+}
+.btn__edit {
+    background-color:#0E3746 ;
+    border: 2px solid #0E3746;
+    color:white;
+    font-size: 20PX;
 }

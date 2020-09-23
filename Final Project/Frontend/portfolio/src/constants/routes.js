@@ -6,4 +6,5 @@ export const CONTACT ="/contact";
 export const RESUME ="/resume";
 export const  LOGIN ="/login";
 export const CREATEBLOG='/createblog';
-export const FullBlog='/fullblog';
+export const FullBlog='/blogs/:id';
+export const COMMENTS='/comments'

@@ -7,7 +7,13 @@ import "./Header.css"
  
  
 class Header extends  Component {
+
+    logout =() => {
+        localStorage.clear('Token')
+    }
+
    render(){
+    const token= localStorage.getItem('Token');
        return(
            <header>
                <div className="container clearfix">
@@ -30,7 +36,21 @@ class Header extends  Component {
                                 </li>
                                 <li>
                                     <Link to={routes.RESUME}>RESUME</Link>
-                                </li>             
+                                </li> 
+                                {/* <li>{ token ?
+                                    <button className="btn__edit"><i class="fas fa-pencil-alt"></i></button>
+                                    :null
+                                }
+                        
+                                </li> */}
+                                {/* <li> */}
+                             
+                                { token ? 
+                                    <button className="btn__logout" onClick={this.logout}>Logout</button>
+                                    :null
+                                }
+                        
+                                {/* </li>             */}
                             </ul>
                     </div>
 

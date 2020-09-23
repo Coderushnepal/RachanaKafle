@@ -28,9 +28,8 @@
     padding:4px;
 }
 .btn__readmore {
-    margin-top:30px;
-    margin-bottom:30px;
-    color:white;
+    margin: 20px 200px;
+    /* margin-bottom:30px; */
     background-color:#358173;
     border: 2px solid #358173;
     font-size: 15px;
@@ -48,4 +47,13 @@
  {
     float:right;
     font-size: 30px;;
+}
+.btn__delete {
+    float:right;
+    color:white;
+    background:#0E3746;
+    border:2px solid #0E3746; 
+    margin: auto;
+    font-size: 20PX;
+
 }

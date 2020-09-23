@@ -1,6 +1,9 @@
 import React ,{Component} from 'react';
 import "./createblog.css"
 import axios from 'axios';
+import iziToast from 'izitoast';
+import "../../common/toaster.css"
+
 
 
 
@@ -31,6 +34,8 @@ class CreateBlog extends Component {
         }).catch((err) => {
         console.log(err);
         });
+
+        
     }
     handleChange = (event) => {
         this.setState({
@@ -43,6 +48,10 @@ class CreateBlog extends Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
+        iziToast.show({
+            message:"Blogs created successfully",
+            position: 'topRight',
+         })
         
     }
 

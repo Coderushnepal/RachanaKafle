@@ -12,11 +12,17 @@ export const fetchBlogs = async () => {
 
 
 
-export const fetchBlogsById  = async (id) => {
+export const fetchBlogsById  = async (blogId) => {
     //call single blogs async api
-    const {data} =await http.get(`/blogs/${id}`);
-    return data[0];  
+    const {data} =await http.get(`/blogs/${blogId}`);
+    console.log(data)
+    return data.data[0];  
 }
 
 
+export const deleteBlogs =async (blogId) => {
+    const {data} =await http.delete(`/blogs/${blogId}`);
+    console.log(data)
+    return data.data[0];  
 
+}

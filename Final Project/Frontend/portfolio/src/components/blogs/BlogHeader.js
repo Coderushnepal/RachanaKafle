@@ -55,34 +55,32 @@ class Header extends  Component {
                              <li>
                                  <Link to={routes.RESUME}>RESUME</Link>
                              </li> 
-                                                                     
-                        <div >{ token ?
-                         <Link to={routes.CREATEBLOG} className="btn blog__create"><i class="fas fa-plus-circle"></i></Link> 
-                            :null 
-                            }      
-                         </div>
-
-                        <div>
-                             <button onclick={this.logout}>Logout </button>
-                        </div>  
+                             <li>
+                                { token ?
+                                <button className="btn__logout" onClick={this.logout}>Logout</button>
+                                :null
+                                }
+                            </li>  
                         
-                         </ul>
+                    </ul>
                  </div>
 
-                 <div class="header__left left" >
-                 {/* style={{paddingTop:"10px"}} */}
+                 {/* <div class="header__left left"  style={{paddingTop:"10px"}}>
+                
                      <span>RACHANA KAFLE</span>
-                 </div>
+                 </div> */}
+                 <div>
 
                  <div className="search__bottom">
                     <form  onSubmit={this.search} className="search-bar">
                         <input type="search"
-               placeholder="Search blog here"
-                   value={this.state.searchText} 
-                          onChange={this.handleTextChange} 
+                            placeholder="Search blog here"
+                            value={this.state.searchText} 
+                             onChange={this.handleTextChange} 
                          />   
                      </form>
                     </div>
+                </div>    
             </div>
 
         </header>

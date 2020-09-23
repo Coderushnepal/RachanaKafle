@@ -5,6 +5,8 @@ import { Spinner} from '../common';
 import Header from './BlogHeader'
 import { fetchBlogs  } from '../../services/blogServices'
 import Footer from '../common/footer/Footer';
+import {Link} from 'react-router-dom';
+import * as routes from "../../constants/routes";
 
 
  function searchingFor(searchText) {
@@ -26,6 +28,19 @@ import Footer from '../common/footer/Footer';
   };
 }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
 //APi call
  fetchBlogs=async() => {
   // setTimeout(()=> {
@@ -53,10 +68,35 @@ setSearchText = (searchText) => {
  
    render(){
     const { searchFor,blogs,isLoading} = this.state;
+    const token= localStorage.getItem('Token');
+
        return(
          <div>
            {/* <Header /> */}
            <Header setSearchText={this.setSearchText}  />
+              { token ?
+                  <button className="btn__create">
+                        <Link  style={{color:"white"}} to={routes.CREATEBLOG}><i class="fas fa-plus-circle"></i></Link> 
+                  </button> 
+                  :null 
+               }  
+
+              {/* <div className="search__bottom">
+                    <form  onSubmit={this.search} className="search-bar">
+                        <input type="search"
+                            placeholder="Search blog here"
+                            value={this.state.searchText} 
+                             onChange={this.handleTextChange} 
+                         />   
+                     </form>
+                    </div> */}
+
+
+
+
+
+
+
 
            {isLoading ? (
                      <Spinner />
@@ -66,7 +106,7 @@ setSearchText = (searchText) => {
                     <Blog key={blog.id} info={blog} /> 
                   ))}  */}
                       {blogs.filter(searchingFor(searchFor)).map(blog => 
-                        <Blog key={blog.id} info={blog} /> 
+                        <Blog key={blog.id} info={blog} id={blog.id}/> 
                       )} 
               </main>  
                    )}  

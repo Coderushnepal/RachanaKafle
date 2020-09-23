@@ -1,99 +1,81 @@
-/* 
-.clearfix:after {
+clearfix:after {
     content:"";
     display: block;
     clear: both;
 }
-.header {
-    background-color:green; */
-    /* background-color:#2E8B57;
-    padding:22px;
-}
-.header__top ,.header__bottom{
-    width:100%
-} */
 
-/* .header__top h1 { */
-    /* float: left;
-    min-width: 90%;
-    text-align: center;
-    color:white;
-}
 
-.btn__login {
-    float:right;
-    border-radius: 25px;
-	background: #0d73e0;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 8px 25px; */
-    /* margin-top: 4px; */
-    /* margin-right:3px;
-    border: 2px solid grey;
-    position: absolute;
-    top:3px;
-    
-} 
-
-/* .navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width:75%;
-    
-} 
 .left{
     float: left;
 }
 .right {
     float:right;
-} */
-/* 
+}
+
+header {
+     background-color:#358173;
+    padding:22px; 
+} 
+
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+    
+}  
+
+
 .navbar li {
    
     display: inline-block;
     margin-left:10px;
     font-size: 20px;
    
-} 
+}  
 .navbar li a    {
 text-decoration: none;
-text-transform: uppercase;  */
-/* color:white;
+text-transform: uppercase; 
+color:white;
 }
  
 .navbar li a:hover {
-    background-color:#3e8105; */
-    /* background-color:#D2691E */
-  /* } */
- 
-
-/* 
-.search__bottom {
-    width:25%
-
- }
-
-.search-bar input {
-    padding:10px 20px;
-    border-radius:20px;
-    border: 2px solid grey;
-    margin-bottom: 3px;
-    font-size: 17px;
-}  */ */
-
-
-.blog__create {
-    background-color:#54af51;
-    border-color: #54af51;
+    background-color:#9d4931;
     color:white;
-    font-size: 18px;
-    padding: 5px 7px;
-    border-radius:5px;
-    cursor: pointer;
 }
-   
+ 
+.header__left {
+    font: 400 100px/1.5; 
+    /* padding-top: 10px; */
+    /* width:25%; */
+    
+}
+ .header__right { 
+ padding-left: 50px;
+    /* width:75%; */ 
+}
+.header__left span {
+    font-size: 20px;
+    color:white;
+    font-weight: 500;
+    /* font-family: cursive; */
+
+}
+.btn__logout {
+    background:#0E3746;
+    /* background:#; */
+    color:white;
+    /* border: 2px solid #0000FF; */
+     border: 2px solid #0E3746; 
+
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius:20px;
+    cursor: pointer;
+
+}
   
 .search-bar input {
     margin-top: 4px;
@@ -102,5 +84,25 @@ text-transform: uppercase;  */
     border: 2px solid white;
     font-size: 17px;
 }  
+
+.btn__logout {
+    background:#0E3746;
+    color:white;
+    /* border: 2px solid #0000FF; */
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius:20px;
+    cursor: pointer;
+
+}
+.btn__create {
+    float: right;
+    color:white;
+    background-color:#0e3746;
+    border:2px solid #0E3746;
+    font-size: 20px;
+    padding:5px 10px;
+    margin-top: 10px;
+}
   
 

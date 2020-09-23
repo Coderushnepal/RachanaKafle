@@ -72,6 +72,8 @@ ul:last-child {
 /*hero-section starts*/
 .site-hero {
 background-image: url(https://i.postimg.cc/zDprfRRG/IMG-8337-CR2.jpg);
+ /* background-image: url(https://i.postimg.cc/4dxrM3fp/IMG-8337-CR2-2.jpg);  */
+
 
     background-size: cover;
     background-position: center center;
@@ -125,7 +127,7 @@ background-image: url(https://i.postimg.cc/zDprfRRG/IMG-8337-CR2.jpg);
 
 .site-subheading{
     max-width: 640px;
-    color: rgba(255, 255, 255, 0.5);
+    color:white;
     line-height: 2;
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
@@ -151,6 +153,17 @@ background-image: url(https://i.postimg.cc/zDprfRRG/IMG-8337-CR2.jpg);
     background-color:#358173;
     border-color:#358173;
 }
+
+
+
+.site-heading {
+    font-size: 30px;
+    font-style: inherit ;
+    color:#9d4931;
+}
+
+
+
 
 /*hero-section ends*/
 

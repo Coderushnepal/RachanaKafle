@@ -4,36 +4,53 @@ import "./Blog.css";
 import {Link} from 'react-router-dom';
 import * as routes from '../../constants/routes'
 import axios from 'axios'
+import { fetchBlogsById  } from '../../services/blogServices'
 
 
 import LikeCounter from '../HOC/LikeCounter';
 class Blog extends Component {
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //         isLoading: true,
-    //         //array ma data rakhne
-    //         blogs: [],
-    //     };
-    // }
-    // scrollPartnerRef = null;
-
-    componentDidMount(blogId) {
-        axios.get(`http://localhost:1234/blogs ${blogId}`)
-        // axios.get(`http://localhost:1234/blogs/{blogId}`)
-
-        .then(res=> {
-            // console.log(res.data.data);
-            const blogs = res.data.data;
-            this.setState({ blogs });
-        });
+    constructor(props) {
+        super(props)
+        this.state = {
+            // isLoading: true,
+            blogsId: [],
+        };
     }
+   
+
+    fetchBlogsById=async() => {
+     
+          console.log("blog with id ")
+          const data = await fetchBlogsById(this.props.id);
+          this.setState({
+            blogsId:data,
+            // isLoading:false,
+          });
+        //   this.props.history.push('/fullblog');
+          console.log(data)
+      };
+
+       
+      componentDidMount() {
+        console.log("inside didmount")
+        this.fetchBlogsById();
+      } 
+
+      deleteBlogs(id) {
+          if(window.confirm('Are you sure?'))
+          fetch('http://localhost:8848/blogs/'+id,{
+            // fetch('http://localhost:8848/blogs/15',{
+              method:'DELETE',
+          });
+          
+      }
 
 
 
     render(){
-        const{title,description,image,read_time,published_on,blogId}=this.props.info;
+        const{title,description,image,read_time,published_on,id}=this.props.info;
         console.log(this.props.info)
+        const token= localStorage.getItem('Token');
         return (
             <div className="card">
 
@@ -43,22 +60,29 @@ class Blog extends Component {
 
                 <div class="blog__title">
                 <h2>{title}</h2>
+                <span style={{color:"red"}}>{published_on}</span>
+                <span>{read_time}</span>
                 </div>
-
                 <div className="blog__description"> 
                     {description}
-                    {/* <button className="btn__readmore">Read More</button> */}
-            {/* <Link to={routes.FullBlog} className="btn__readmore">Read More</Link> */}
-                {/* <Link to={routes.FullBlog+blogId} className="btn__readmore">Read More</Link> */}
-            <Link to={routes.FullBlog} className="btn__readmore">Read More</Link> 
+                </div><br></br>    
+                <button className="btn__readmore">
+                  <Link to={`/blogs/${id}`} style={{color:"white"}}>Read More</Link>
+              </button>       
+              {/* <br></br> */}
 
-
-
-
-                </div>
-                < LikeCounter />     
-            </div>
-            
+            <div className="btn__likedelete" clearfix>
+                    {   token?
+                <button className="btn__delete"
+                // onClick={()=>this.deleteBlogs({`/blogs/${id}`})}>
+                onClick= {() => this.deleteBlogs(id)}>
+                <i class="far fa-trash-alt"></i>
+                  </button>
+                :null
+                }                  
+                < LikeCounter />   
+             </div>                
+        </div>            
         );
     }
  

@@ -14,11 +14,13 @@
 
 .description {
     float: left;
-    width:45%;
+    width:30%;
+    margin-top: 50px;
+    line-height: 27px;
 }
 .profile {
     width:45%;
-    float:right;
+    float:left;
    
 
 }

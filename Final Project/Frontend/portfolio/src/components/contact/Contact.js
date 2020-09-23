@@ -8,6 +8,8 @@ import iziToast from 'izitoast';
 import Header from '../common/header/Header'
 import Footer from "../common/footer/Footer";
 
+// import '../common/toaster.css'
+
 class Contact extends Component {
     constructor(props) {
         super(props);
