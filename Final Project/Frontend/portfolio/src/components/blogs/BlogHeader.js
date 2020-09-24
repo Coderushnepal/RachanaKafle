@@ -57,15 +57,31 @@ class Header extends  Component {
                              </li> 
                              <li>
                                 { token ?
+                                    <button className="create__btn">
+                                            <Link  
+                                            style={{
+                                            color:"white",
+                                            background:"#0e3746",
+                                            fontSize:"20px",
+                                            padding:"5px 10px",
+                                            border:"2px solid #0E3746",
+                                            borderRadius:"10px"
+                                            }}
+                                             to={routes.CREATEBLOG}><i class="fas fa-plus-circle"></i></Link> 
+                                    </button> 
+                                    :null 
+                                } 
+                            </li>
+                             <li>
+                                { token ?
                                 <button className="btn__logout" onClick={this.logout}>Logout</button>
                                 :null
                                 }
-                            </li>  
-                        
+                            </li>                          
                     </ul>
                  </div>
 
-                 {/* <div class="header__left left"  style={{paddingTop:"10px"}}>
+                 {/* <div class="header__left left">
                 
                      <span>RACHANA KAFLE</span>
                  </div> */}
@@ -79,7 +95,14 @@ class Header extends  Component {
                              onChange={this.handleTextChange} 
                          />   
                      </form>
+                
                     </div>
+                    {/* { token ?
+                  <button className="btn__create">
+                        <Link  style={{color:"white"}} to={routes.CREATEBLOG}><i class="fas fa-plus-circle"></i></Link> 
+                  </button> 
+                  :null 
+               }  */}
                 </div>    
             </div>
 

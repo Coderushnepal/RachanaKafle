@@ -16,7 +16,7 @@ export const fetchBlogsById  = async (blogId) => {
     //call single blogs async api
     const {data} =await http.get(`/blogs/${blogId}`);
     console.log(data)
-    return data.data[0];  
+    return data.data;  
 }
 
 

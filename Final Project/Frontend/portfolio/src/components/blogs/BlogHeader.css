@@ -4,7 +4,6 @@ clearfix:after {
     clear: both;
 }
 
-
 .left{
     float: left;
 }
@@ -17,24 +16,19 @@ header {
     padding:22px; 
 } 
 
-
 .navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-   
-    
+    overflow: hidden;   
 }  
-
 
 .navbar li {
-   
     display: inline-block;
     margin-left:10px;
-    font-size: 20px;
-   
+    font-size: 20px;  
 }  
+
 .navbar li a    {
 text-decoration: none;
 text-transform: uppercase; 
@@ -54,13 +48,13 @@ color:white;
 }
  .header__right { 
  padding-left: 50px;
-    /* width:75%; */ 
+    /* width:75%;  */
 }
 .header__left span {
     font-size: 20px;
     color:white;
     font-weight: 500;
-    /* font-family: cursive; */
+    /*font-family: cursive; */
 
 }
 .btn__logout {
@@ -78,7 +72,7 @@ color:white;
 }
   
 .search-bar input {
-    margin-top: 4px;
+    /* margin-top: 4px; */
     padding:10px 20px;
     border-radius:20px;
     border: 2px solid white;
@@ -93,16 +87,6 @@ color:white;
     padding: 10px 15px;
     border-radius:20px;
     cursor: pointer;
-
-}
-.btn__create {
-    float: right;
-    color:white;
-    background-color:#0e3746;
-    border:2px solid #0E3746;
-    font-size: 20px;
-    padding:5px 10px;
-    margin-top: 10px;
 }
   
 

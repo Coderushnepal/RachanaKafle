@@ -8,9 +8,9 @@ class Resume extends Component {
         return (
             <div>
                 <Header />
-                <div>
+                {/* <div>
                     <img style={{width:"70%",marginLeft:"200px",marginTop:"20px"}} src="https://i.postimg.cc/Qt3R48cc/IMG-3739.jpg"></img>
-                </div>
+                </div> */}
                 <Footer />
             </div>
         )

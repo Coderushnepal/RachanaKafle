@@ -27,19 +27,6 @@ import * as routes from "../../constants/routes";
     isLoading: true,
   };
 }
- 
-
-
-
-
-
-
-
-
-
-
-
-
 
 //APi call
  fetchBlogs=async() => {
@@ -68,36 +55,11 @@ setSearchText = (searchText) => {
  
    render(){
     const { searchFor,blogs,isLoading} = this.state;
-    const token= localStorage.getItem('Token');
 
        return(
          <div>
            {/* <Header /> */}
            <Header setSearchText={this.setSearchText}  />
-              { token ?
-                  <button className="btn__create">
-                        <Link  style={{color:"white"}} to={routes.CREATEBLOG}><i class="fas fa-plus-circle"></i></Link> 
-                  </button> 
-                  :null 
-               }  
-
-              {/* <div className="search__bottom">
-                    <form  onSubmit={this.search} className="search-bar">
-                        <input type="search"
-                            placeholder="Search blog here"
-                            value={this.state.searchText} 
-                             onChange={this.handleTextChange} 
-                         />   
-                     </form>
-                    </div> */}
-
-
-
-
-
-
-
-
            {isLoading ? (
                      <Spinner />
                  ) : (

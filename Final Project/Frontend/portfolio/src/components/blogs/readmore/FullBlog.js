@@ -1,37 +1,21 @@
 import React ,{Component} from 'react';
-import {fetchBlogs} from '../../../services/blogServices'
-
-
-// import * as routes from '../../constants/routes'
-// import {Link} from 'react-router-dom';
-
+import {fetchBlogs, fetchBlogsById} from '../../../services/blogServices'
 
 
 class FullBlog extends Component {
     constructor(props) {
         console.log(props)
         super(props);
-    //     this.state = {
-    //         blogDetails: {
-    //             title: '',
-    //             details: '',
-    //             published_on: ''
-    //         }
-    // //     }
-    // }
-
-    // async componentDidMount() {
-    //     const blogId = props.match.params.id;
-
-    //     const blogDetails = await fetchBlogsById(blogId);
-
-    //     this.setState({ blogDetails });
-    // }
-
 
     this.state={
         //data 
-        fullblogs:[], 
+        blog:{
+            title: "",
+            description: "",
+            readTime:"",
+            publishedOn:"",
+            image:""
+        }, 
       };
     }
      
@@ -39,10 +23,10 @@ class FullBlog extends Component {
             console.log("Retriving full  blogs data ")
             const id = this.props.match.params.id;
             console.log(id)
-            const data = await fetchBlogs(id);
-            console.log(data)
+            const data = await fetchBlogsById(id);
+            console.log("individual blog",data)
             this.setState({
-                fullblogs:data,
+                blog:data,
             });
       };
        
@@ -54,25 +38,24 @@ class FullBlog extends Component {
   
 
     render(){
-        const{title,description,image,read_time,published_on}=this.state;
-        console.log('This is title kaljdfalkjdflkajdfklajslk', this.props.match.params.title);
+        console.log(this.state.blog)
+        const{title,description,image,readTime,publishedOn}=this.state.blog;
+        console.log('This is title kaljdfalkjdflkajdfklajslk',title);
 
         return (
-            // <div key={`gallery-${img.id}`}></div>
         //    <div className="blog__container" key={`blogs-${blog.id}`}>
-        <div className="blog__container">
-
-                <div className="blog__title">
+        <div className="fullblog__container">             
+               <div className="fullblog__title">
                  {title} 
                 </div>
                 <div class="blog__">
-                <span>{published_on}</span>
-                    <span>{read_time}</span>
+                <span>{publishedOn}</span>
+                    <span>{readTime}</span>
                 </div>
-               <div className="blog__image">
-                    {image}
+               <div className="fullblog__image">
+                   <img src= {image}></img>
                </div>
-                <div className="blog__text">
+                <div className="fullblog__text">
                     {description}
                 </div>  
                 <div className="commentlike__button">
@@ -80,7 +63,8 @@ class FullBlog extends Component {
                 {/* <Link to={routes.COMMENT}><i class="far fa-comments"></i></Link>  */}
 
                 <i class="fas fa-heart"></i>
-                </div>  
+                </div> 
+              
            </div>     
                 
         )
