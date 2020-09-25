@@ -24,7 +24,6 @@ import * as routes from "../../constants/routes";
     //data 
     blogs:[],
     searchFor:"",
-    isLoading: true,
   };
 }
 

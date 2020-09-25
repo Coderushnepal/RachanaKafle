@@ -66,7 +66,7 @@ class CreateBlog extends Component {
                {/* <label for="blogimage">upload a image:</label><br></br> */}
                 {/* <input type="file" id="blog__image" name="blog__image" /><br></br> */}
                <label>description :</label><br></br>
-               <textarea onChange={this.handleChange} id="blog__text"  name="description" placeholder="Enter blog text"></textarea><br/>
+               <textarea onChange={this.handleChange} id="blog__text"  name="description" placeholder="Enter blog text" value={description}></textarea><br/>
                {/* <label>Read time: </label>
                     <select>
                         {/* <option value="0">Select time:</option> */}

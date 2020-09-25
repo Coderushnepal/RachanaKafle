@@ -1,8 +1,7 @@
 
-import React, { Component, Fragment } from 'react';
+import React, { Component} from 'react';
 import iziToast from 'izitoast';
 import './login.css';
-import axios from 'axios';
 import {login} from '../../services/loginService';
 class Login extends Component { 
         constructor(props){

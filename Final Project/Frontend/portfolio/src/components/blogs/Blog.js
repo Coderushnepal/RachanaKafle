@@ -2,8 +2,6 @@
 import React,{Component} from 'react';
 import "./Blog.css";
 import {Link} from 'react-router-dom';
-import * as routes from '../../constants/routes'
-import axios from 'axios'
 import { fetchBlogsById  } from '../../services/blogServices'
 
 
