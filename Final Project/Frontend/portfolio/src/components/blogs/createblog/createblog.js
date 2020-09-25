@@ -23,7 +23,7 @@ class CreateBlog extends Component {
     fetchData = () => {
         axios({
           method: "POST",
-          url: "http://localhost:8848/blogs",
+          url: "https://rachana-portfolio-api.herokuapp.com/blogs",
           data: {
             title: this.state.formData.title,
             description: this.state.formData.description,

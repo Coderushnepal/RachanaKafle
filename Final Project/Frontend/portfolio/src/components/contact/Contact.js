@@ -23,7 +23,7 @@ class Contact extends Component {
     fetchData = () => {
         axios({
           method: "POST",
-          url: "http://localhost:8848/contact",
+          url: "https://rachana-portfolio-api.herokuapp.com/contact",
           data: {
             fullName: this.state.formData.fullName,
             phoneNumber: this.state.formData.phoneNumber,

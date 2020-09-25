@@ -34,16 +34,9 @@ class Header extends  Component {
                                 <li>
                                 <Link to={routes.CONTACT} title="About">CONTACT</Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <Link to={routes.RESUME}>RESUME</Link>
-                                </li> 
-                                {/* <li>{ token ?
-                                    <button className="btn__edit"><i class="fas fa-pencil-alt"></i></button>
-                                    :null
-                                }
-                        
-                                </li> */}
-                                {/* <li> */}
+                                </li>  */}
                              
                                 { token ? 
                                     <button className="btn__logout" onClick={this.logout}>Logout</button>

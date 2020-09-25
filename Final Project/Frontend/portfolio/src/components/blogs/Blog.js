@@ -37,13 +37,13 @@ class Blog extends Component {
       } 
 
       deleteBlogs(id) {
-          if(window.confirm('Are you sure?'))
+        if(window.confirm('Are you sure?'))
+        // fetch('https://rachana-portfolio-api.herokuapp.com/blogs'+id,{
           fetch('http://localhost:8848/blogs/'+id,{
-            // fetch('http://localhost:8848/blogs/15',{
-              method:'DELETE',
-          });
-          
-      }
+            method:'DELETE',
+        });
+        
+    }
 
 
 
@@ -71,7 +71,7 @@ class Blog extends Component {
               </button>       
               {/* <br></br> */}
 
-            <div className="btn__likedelete" clearfix>
+              <div className="delete" clearfix>
                     {   token?
                 <button className="btn__delete"
                 // onClick={()=>this.deleteBlogs({`/blogs/${id}`})}>
@@ -81,7 +81,7 @@ class Blog extends Component {
                 :null
                 }                  
                 {/* < LikeCounter />    */}
-             </div>                
+             </div>                           
         </div>            
         );
     }
