@@ -6,8 +6,6 @@ export const fetchBlogs = async () => {
     const {data}=await http.get("/blogs");
     console.log(data.data);
     return  data.data;
-
-
 };
 
 
@@ -26,3 +24,5 @@ export const deleteBlogs =async (blogId) => {
     return data.data[0];  
 
 }
+
+

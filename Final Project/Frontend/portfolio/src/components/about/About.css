@@ -30,3 +30,12 @@
     width:60%;
 
 }
+
+.btn-edit {
+    float:right;
+    color:white;
+    background:#0E3746;
+    border:2px solid #0E3746; 
+    font-size: 15PX;
+    padding:2px ;
+}

@@ -9,14 +9,22 @@ import Typewriter from "typewriter-effect";
 
 class Home extends Component {
     render(){
+        const token= localStorage.getItem('Token');
         return (
             <div>
                
                <Header />
 
             <section className="site-hero">
+            {token?
+                    <button className="btn-edit" style={{marginTop:"10px",marginRight:"20px"}}>
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    :null
+                 }       
                 <div className="container clearfix">
                     <div className="row"> 
+
                         <div className="site-text">
                             <h2 className='site-heading'>
                             <Typewriter options={{ strings: ["Hello!<br><br> I am Rachana Kafle."], autoStart: true, loop: true, }} /> 

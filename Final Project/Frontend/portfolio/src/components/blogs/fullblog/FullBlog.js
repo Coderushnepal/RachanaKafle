@@ -1,6 +1,10 @@
 import React ,{Component} from 'react';
-import {fetchBlogs, fetchBlogsById} from '../../../services/blogServices'
-
+import { fetchBlogsById} from '../../../services/blogServices'
+import "./FullBlog.css";
+import LikeCounter from '../../HOC/LikeCounter'
+import {Link} from 'react-router-dom';
+import * as routes from '../../../constants/routes';
+import CommentsDisplay from './comment/displaycomment/displaycomment';
 
 class FullBlog extends Component {
     constructor(props) {
@@ -40,17 +44,18 @@ class FullBlog extends Component {
     render(){
         console.log(this.state.blog)
         const{title,description,image,readTime,publishedOn}=this.state.blog;
-        console.log('This is title kaljdfalkjdflkajdfklajslk',title);
+        console.log('This is title',title);
 
         return (
         //    <div className="blog__container" key={`blogs-${blog.id}`}>
+      
         <div className="fullblog__container">             
                <div className="fullblog__title">
                  {title} 
                 </div>
-                <div class="blog__">
-                <span>{publishedOn}</span>
-                    <span>{readTime}</span>
+                <div className="published__readtime">
+                <span style={{marginRight:"5px"}}>Published On: {publishedOn}</span>
+                    <span>Read time: {readTime}</span>
                 </div>
                <div className="fullblog__image">
                    <img src= {image}></img>
@@ -58,15 +63,25 @@ class FullBlog extends Component {
                 <div className="fullblog__text">
                     {description}
                 </div>  
-                <div className="commentlike__button">
-                <i class="far fa-comments"></i>
-                {/* <Link to={routes.COMMENT}><i class="far fa-comments"></i></Link>  */}
-
-                <i class="fas fa-heart"></i>
-                </div> 
-              
-           </div>     
+                <div className="commentlike__button" clearfix style={{
+                    marginTop:"10px",
+                    }}>
                 
+                    <span classsName="comment__button" style={{
+                        fontSize:"30px" ,
+                        float:"left",
+                        marginRight:"40px" ,
+                        marginLeft:"30px",
+                        color:"red",
+                        }} >
+                    <Link to={routes.COMMENTS} style={{ color:"#358173" }}><i class="far fa-comments"></i></Link> 
+                    </span>
+                    <span style={{float:"left"}}>< LikeCounter /></span>   
+                </div> 
+                <div className="comment-section" style={{marginTop:"60px",marginLeft:"30px"}}>
+                <CommentsDisplay />
+                </div>    
+           </div>            
         )
     }
 }

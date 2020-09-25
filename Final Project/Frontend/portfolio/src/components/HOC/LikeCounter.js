@@ -11,7 +11,7 @@ class LikeCounter extends Component {
                  style={{
                     float:"left",
                     fontSize:"30px",
-                    color:"red"
+                    color:"#358173"
               }}>
                 <i class="fas fa-heart"> {this.props.count}</i>
                

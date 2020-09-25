@@ -141,6 +141,7 @@ input[type=text], textarea{
 .contact__medium i {
     color: #358173;
     padding:7px;
+    font-size:20px;
 }
 /* .contact__form  h1 {
     color:#157dc3;

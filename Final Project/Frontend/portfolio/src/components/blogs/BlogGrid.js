@@ -55,6 +55,8 @@ setSearchText = (searchText) => {
  
    render(){
     const { searchFor,blogs,isLoading} = this.state;
+    const token= localStorage.getItem('Token');
+
 
        return(
          <div>
@@ -63,7 +65,17 @@ setSearchText = (searchText) => {
            {isLoading ? (
                      <Spinner />
                  ) : (
+                   
               <main>
+              
+                  <div className="btn-create">
+                      {token?
+                        <button className="btn-add">
+                          <Link to={routes.CREATEBLOG} style={{color:"white"}}><i class="fas fa-plus-square"></i></Link>
+                        </button>
+                        :null
+                    }
+                  </div>
                 {/* {this.state.blogs.map(blog => (
                     <Blog key={blog.id} info={blog} /> 
                   ))}  */}

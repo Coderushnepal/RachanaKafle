@@ -7,7 +7,7 @@ import axios from 'axios'
 import { fetchBlogsById  } from '../../services/blogServices'
 
 
-import LikeCounter from '../HOC/LikeCounter';
+// import LikeCounter from '../HOC/LikeCounter';
 class Blog extends Component {
     constructor(props) {
         super(props)
@@ -80,7 +80,7 @@ class Blog extends Component {
                   </button>
                 :null
                 }                  
-                < LikeCounter />   
+                {/* < LikeCounter />    */}
              </div>                
         </div>            
         );

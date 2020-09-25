@@ -1,0 +1,30 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+.fullblog__title{
+    text-align: center;
+    padding:20px;
+    color:#9d4931;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.fullblog__image img {
+    width:80%;
+    height:10%;
+    margin-left: 100px;
+
+}
+.published__readtime {
+    text-align: center;
+    color:#358173;
+
+}
+.fullblog__text  {
+    text-align: center;
+}
+/* .comment__button {
+    font-size: 30px;
+} */

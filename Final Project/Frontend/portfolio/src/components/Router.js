@@ -10,8 +10,8 @@ import Skills from './skills';
 import Resume from './resume'
 import Login from './login';
 import Createblog from './blogs/createblog/createblog'
-import FullBlog from './blogs/readmore/FullBlog';
-import Comments from './blogs/readmore/comment/comment';
+import FullBlog from './blogs/fullblog/FullBlog';
+import Comments from './blogs/fullblog/comment/createcomment/createcomment';
 
 
 const Router= () => (

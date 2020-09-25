@@ -52,6 +52,7 @@ class CreateBlog extends Component {
             message:"Blogs created successfully",
             position: 'topRight',
          })
+         this.props.history.push('/blogs');
         
     }
 
